@@ -1,0 +1,36 @@
+.articleList {
+	width: 30vw;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-top: 48px;
+
+	.articleBox {
+        margin-bottom: 24px;
+		list-style-type: "📃 ";
+		a {
+			text-decoration: none;
+			.title {
+				font-weight: bold;
+				font-size: 1.8rem;
+			}
+		}
+        .time {
+            color: $font_tint_color_1;
+        }
+        .classify {
+            margin-right: 12px;
+        }
+        .tags {
+            margin-right: 4px;
+        }
+	}
+}
+
+@media (max-width: 900px) {
+	.articleList {
+		width: 100%;
+		.articleBox {
+			list-style: none;
+		}
+	}
+}

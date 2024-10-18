@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: JB-Medium, PingFang;
+	transition: 0.2s;
+}
+
+body {
+	color: $font_color;
+	background-color: $background_color;
+}
+
+@font-face {
+	font-family: JB-Medium;
+	src: url("~/assets/typeface/JetBrainsMono-Medium.woff2");
+	font-display: swap;
+}
+@font-face {
+	font-family: PingFang;
+	src: url("~/assets/typeface/PingFang.otf");
+	font-display: swap;
+}
+
+button {
+	border: 0; // 去除未选中状态边框
+	outline: none; // 去除选中状态边框
+	background-color: rgba(0, 0, 0, 0); // 透明背景
+}
+
+a {
+	color: #F4C992;
+}
+a:hover {
+	color: #A85859;
+}
+
+html::-webkit-scrollbar {
+	width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+	display: none;
+}
+
+html::-webkit-scrollbar-thumb {
+	background: #E6DDB2;
+	border-radius: 2px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background: #E5AF80;
+	border-radius: 2px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+	background: #F4C992;
+	border-radius: 2px;
+}
+
+@import url("~/assets/css/articleTheme.scss");
+
+@media (max-width: 900px) {
+	* {
+		p {
+			font-size: 0.8rem;
+		}
+	}
+}
