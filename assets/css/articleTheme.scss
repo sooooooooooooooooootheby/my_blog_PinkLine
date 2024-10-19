@@ -16,6 +16,7 @@
 			border-radius: 12px;
 			overflow: scroll;
 			overflow-y: hidden;
+			font-size: 0.8rem;
 		}
 		pre::-webkit-scrollbar {
 			height: 0px;
@@ -53,6 +54,13 @@
 
 		img.portrait {
 			border: 2px solid red;
+		}
+		h1,h2,h3,h4,h5,h6 {
+		    a {
+				color: #FFFFFF;
+				text-decoration: none;
+				pointer-events: none;
+			}
 		}
 	}
 }

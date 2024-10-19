@@ -42,7 +42,6 @@
 					.item {
 						margin: 12px 0;
 						list-style: none;
-						font-size: 1.2rem;
 						a {
 							@include flex_center($direction: row);
 							.icon {

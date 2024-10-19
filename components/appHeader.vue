@@ -1,7 +1,6 @@
 <template>
 	<div :class="{ appHeader: true, background: !isTop }">
 		<div class="content">
-			<img src="/logo_small.webp" alt="logo" class="logo" />
 			<div class="articleInfo" v-if="isArticle">
 				<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 					<p class="articleTitle">{{ data.title }}</p>

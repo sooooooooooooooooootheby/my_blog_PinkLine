@@ -35,7 +35,7 @@ header {
 	z-index: 2;
 }
 main {
-	width: 40vw;
+	width: 800px;
 	margin: 0 auto;
 	padding-top: 83px;
 	position: relative;

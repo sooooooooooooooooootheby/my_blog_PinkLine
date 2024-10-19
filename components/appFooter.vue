@@ -6,13 +6,13 @@
 					<img src="/logo_small.webp" alt="logo" class="logo" />
 					<ul>
 						<li>
-							<a href="https://github.com/sooooooooooooooooootheby/">
-								<Icon class="icon" name="uim:github" />
+							<a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">
+								<Icon class="icon" name="material-symbols:train-rounded" />
 							</a>
 						</li>
 						<li>
-							<a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener" title="开往-友链接力">
-								<Icon class="icon" name="material-symbols:train-rounded" />
+							<a href="https://github.com/sooooooooooooooooootheby/">
+								<Icon class="icon" name="uim:github" />
 							</a>
 						</li>
 					</ul>
