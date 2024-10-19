@@ -16,6 +16,9 @@
 </template>
 
 <script setup>
+useHead({
+	title: "article",
+});
 const handleTime = (time) => {
 	if (time === null) {
 		this.updateTime = false;

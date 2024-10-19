@@ -41,6 +41,9 @@
 </template>
 
 <script setup>
+useHead({
+	title: "about",
+});
 const skill = ref(["JavaScript", "Vue.js", "Sass", "Node.js", "C", "Kotlin", "MySql"]);
 const project = ref([
 	{

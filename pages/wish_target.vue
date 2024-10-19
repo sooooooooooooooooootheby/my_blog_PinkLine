@@ -25,6 +25,9 @@
 </template>
 
 <script setup>
+useHead({
+	title: "wish_target",
+});
 const target = ref([
 	{
 		title: "通过英语B级能力测验",

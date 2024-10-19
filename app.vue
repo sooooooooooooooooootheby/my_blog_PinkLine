@@ -10,7 +10,19 @@
 	</footer>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+	title: "River of star Dreams",
+	meta: [{ name: "description", content: "s22y's webSite" }],
+	link: [
+		{ rel: "shortcut icon", href: "/logo_small.webp" },
+		{ rel: "apple-touch-icon", href: "/logo_small.webp" },
+	],
+	titleTemplate(titleChunk) {
+		return titleChunk ? `${titleChunk} - s22y's webSite` : "s22y's webSite";
+	},
+});
+</script>
 
 <style lang="scss" scoped>
 header {
