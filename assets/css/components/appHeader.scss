@@ -1,5 +1,6 @@
 .appHeader {
 	height: 83px;
+	backdrop-filter: blur(20px);
 	.content {
 		height: 100%;
 		margin: 0 auto;
@@ -45,12 +46,9 @@
 	}
 }
 
-.background {
-	backdrop-filter: blur(20px);
-}
-
 @media (max-width: 900px) {
 	.appHeader {
+		height: 48px;
 		.content {
 			padding: 0 12px;
 			.logo {

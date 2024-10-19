@@ -10,8 +10,8 @@
 			.topLeft {
 				@include flex_center($direction: row, $content: flex-start);
 				img {
-					width: 64px;
-					height: 64px;
+					width: 52px;
+					height: 52px;
 					margin: 24px 0;
 					margin-right: 24px;
 					border-radius: 14px;
@@ -26,7 +26,7 @@
 						a {
 							color: #ffffff;
 							.icon {
-								font-size: 2rem;
+								font-size: 1.8rem;
 							}
 						}
 						a:hover {

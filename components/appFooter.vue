@@ -12,7 +12,7 @@
 						</li>
 						<li>
 							<a href="https://github.com/sooooooooooooooooootheby/">
-								<Icon class="icon" name="uim:github" />
+								<Icon class="icon" name="mdi:github" />
 							</a>
 						</li>
 					</ul>

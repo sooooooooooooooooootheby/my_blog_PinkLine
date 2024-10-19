@@ -1,5 +1,5 @@
 <template>
-	<div :class="{ appHeader: true, background: !isTop }">
+	<div class="appHeader">
 		<div class="content">
 			<div class="articleInfo" v-if="isArticle">
 				<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
@@ -22,22 +22,6 @@
 </template>
 
 <script setup>
-// 控制页面滚动时，header的背景色
-const isTop = ref(true);
-const handleScroll = () => {
-	if (window.scrollY > 0) {
-		isTop.value = false;
-	} else {
-		isTop.value = true;
-	}
-};
-onMounted(() => {
-	window.addEventListener("scroll", handleScroll);
-});
-onUnmounted(() => {
-	window.removeEventListener("scroll", handleScroll);
-});
-
 // 判断是否处于文章页面
 const route = useRoute();
 const isArticle = computed(() => route.path.includes("/articles/"));
