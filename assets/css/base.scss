@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: JB-Medium, PingFang;
+	font-family: JB-Medium, PingFang-l;
 	transition: 0.2s;
 }
 
@@ -16,8 +16,13 @@ body {
 	font-display: swap;
 }
 @font-face {
-	font-family: PingFang;
-	src: url("~/assets/typeface/PingFang.otf");
+	font-family: PingFang-l;
+	src: url("~/assets/typeface/PingFang-l.otf");
+	font-display: swap;
+}
+@font-face {
+	font-family: PingFang-m;
+	src: url("~/assets/typeface/PingFang-m.otf");
 	font-display: swap;
 }
 
@@ -28,10 +33,10 @@ button {
 }
 
 a {
-	color: #F4C992;
+	color: #f4c992;
 }
 a:hover {
-	color: #A85859;
+	color: #a85859;
 }
 
 html::-webkit-scrollbar {
@@ -43,17 +48,17 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-	background: #E6DDB2;
+	background: #e6ddb2;
 	border-radius: 2px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-	background: #E5AF80;
+	background: #e5af80;
 	border-radius: 2px;
 }
 
 html::-webkit-scrollbar-thumb:active {
-	background: #F4C992;
+	background: #f4c992;
 	border-radius: 2px;
 }
 

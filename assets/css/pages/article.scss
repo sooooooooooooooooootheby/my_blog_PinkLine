@@ -6,12 +6,12 @@
 
 	.articleBox {
         margin-bottom: 24px;
-		list-style-type: "📃 ";
+		list-style: none;
 		a {
 			text-decoration: none;
 			.title {
 				font-weight: bold;
-				font-size: 1.6rem;
+				font-size: 1.4rem;
 			}
 		}
         .time {
@@ -23,6 +23,9 @@
         .tags {
             margin-right: 4px;
         }
+	}
+	.articleBox:hover {
+		list-style-type: "📃 ";
 	}
 }
 

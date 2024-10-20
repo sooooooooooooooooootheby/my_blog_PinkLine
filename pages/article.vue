@@ -7,7 +7,7 @@
 						<p class="title">{{ article.title }}</p>
 					</NuxtLink>
 
-					<p>{{ article.description }}</p>
+					<!-- <p>{{ article.description }}</p> -->
 					<p class="time">{{ handleTime(article.time) }}</p>
 				</li>
 			</ul>

@@ -4,7 +4,7 @@
 			<div class="articleInfo" v-if="isArticle">
 				<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 					<p class="articleTitle">{{ data.title }}</p>
-					<p class="articleTime">{{ data.time }}</p>
+					<p class="articleTime">{{ handleTime(data.time) }}</p>
 				</ContentQuery>
 			</div>
 			<nav class="menu">
@@ -28,6 +28,32 @@ const isArticle = computed(() => route.path.includes("/articles/"));
 
 // 在文章页时显示文章信息
 const config = useRuntimeConfig();
+
+// 格式化时间
+const handleTime = (time) => {
+	if (time === null) {
+		this.updateTime = false;
+		return;
+	}
+
+	// 使用Date对象解析ISO 8601格式的时间戳
+	const date = new Date(time);
+
+	// 解析时间
+	const months = date.getMonth();
+	const day = date.getDate();
+	const year = date.getFullYear();
+	const hours = date.getHours().toString().padStart(2, "0"); // 确保两位数
+	const minutes = date.getMinutes().toString().padStart(2, "0"); // 确保两位数
+	const seconds = date.getSeconds().toString().padStart(2, "0"); // 确保两位数
+
+	// 将月份转换为缩写格式
+	const monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	const month = monthArray[months];
+
+	// 返回格式化的时间字符串
+	return `${month} ${day}, ${year}`;
+};
 </script>
 
 <style lang="scss" scoped>

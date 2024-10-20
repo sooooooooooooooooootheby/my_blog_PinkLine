@@ -1,6 +1,5 @@
 .appHeader {
 	height: 83px;
-	backdrop-filter: blur(20px);
 	.content {
 		height: 100%;
 		margin: 0 auto;
@@ -11,7 +10,6 @@
 			border-radius: 14px;
 			background-color: #ffffff;
 			border: 1px solid $border_color;
-			// @include border_color("border_color");
 		}
 		.articleInfo {
 			width: 100%;
