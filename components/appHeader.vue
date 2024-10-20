@@ -24,13 +24,6 @@
 					</li>
 					<li class="item">·</li>
 					<li class="item">
-						<NuxtLink to="/wish_target">
-							<Icon class="icon" name="icon-park-solid:tea-drink" />
-							<span class="text">wish</span>
-						</NuxtLink>
-					</li>
-					<li class="item">·</li>
-					<li class="item">
 						<NuxtLink to="https://www.travellings.cn/go.html" target="_blank">
 							<Icon class="icon" name="icon-park-solid:railway" />
 							<span class="text">travelling</span>

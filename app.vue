@@ -45,7 +45,7 @@ main {
 footer {
 	width: 50vw;
 	margin: 0 auto;
-	padding: 40px 0;
+	padding: 20px 0;
 	position: relative;
 	z-index: 1;
 }

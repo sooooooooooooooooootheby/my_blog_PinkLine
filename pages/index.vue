@@ -8,7 +8,7 @@
 				<p class="greet_title3"><Icon class="icon" name="icon-park-solid:blossom" />梦想是躺平什么都不用做.</p>
 			</div>
 			<div class="introduce">
-				<p class="introduce_1">目前大学在读, 专业是计算机网络技术.</p>
+				<p class="introduce_1">大学在读, 专业是计算机网络技术.</p>
 				<p class="introduce_2">目前在备战专升本考试, 业余时间会做一些小玩意, 可以去我的<a href="https://github.com/sooooooooooooooooootheby">Github主页</a>查看.</p>
 			</div>
 			<div class="content skill">
@@ -21,6 +21,15 @@
 				<span class="title"> 项目 </span>
 				<ul>
 					<li v-for="(item, index) in project" :key="index">
+						<a :href="item.url" target="_blank"> {{ item.title }} </a>
+						<p>{{ item.description }}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="content project">
+				<span class="title"> Api </span>
+				<ul>
+					<li v-for="(item, index) in api" :key="index">
 						<a :href="item.url" target="_blank"> {{ item.title }} </a>
 						<p>{{ item.description }}</p>
 					</li>
@@ -44,13 +53,25 @@
 useHead({
 	title: "about",
 });
-const skill = ref(["JavaScript", "Vue.js", "Sass", "Node.js", "C", "Kotlin", "MySql"]);
+const skill = ref(["JavaScript", "Vue.js", "Node.js", "C", "Kotlin", "MySql"]);
 const project = ref([
 	{
 		title: "网易云无损解析",
 		description: "如果你苦于没有黑胶会员或者想要转战本地播放器, 不妨试试这个网站, 它可以下载无损音乐",
 		url: "https://neteasepage.sooooooooooooooooootheby.top/",
 	},
+]);
+const api = ref([
+	{
+		title: "网易云音乐api",
+		description: "这个是大佬写的非常强大的api服务, 可惜被律师函警告了, fork了一份自己建服务",
+		url: "https://netease.sooooooooooooooooootheby.top/NeteaseCloudMusicApi/",
+	},
+	{
+		title: "网易云无损解析",
+		description: "这个是另外一个大佬写的api, 可以解析下载音乐, 很强, 我自己建了服务用来改进了她的解析功能.",
+		url: "https://netease.sooooooooooooooooootheby.top/Netease_url/",
+	}
 ]);
 const friend = ref([
 	{
@@ -64,6 +85,10 @@ const friend = ref([
 	{
 		name: "BLxcwg666",
 		url: "https://blog.nekorua.com/",
+	},
+	{
+		name: "Imken",
+		url: "https://imken.moe",
 	},
 ]);
 </script>
