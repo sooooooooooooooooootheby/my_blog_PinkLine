@@ -30,13 +30,17 @@
 				@include flex_center($direction: row);
 
 				.item {
-					margin: 0 18px;
+					margin: 0 2px;
 					list-style: none;
 					@include flex_center($direction: row);
 					a {
 						text-decoration: none;
 						font-size: 1rem;
 						font-weight: bold;
+
+						.icon {
+							display: none;
+						}
 					}
 				}
 			}
@@ -61,6 +65,13 @@
 					.item {
 						a {
 							font-size: 0.8rem;
+							.icon {
+								display: flex;
+								font-size: 1.1rem;
+							}
+							.text {
+								display: none;
+							}
 						}
 					}
 				}

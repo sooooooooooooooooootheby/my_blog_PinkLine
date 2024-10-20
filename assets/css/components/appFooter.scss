@@ -1,65 +1,8 @@
 .appFooter {
-	.content {
-		height: 100%;
-		margin: 0 auto;
-		@include flex_center($content: space-between);
-
-		.top {
-			width: 100%;
-			@include flex_center($direction: row, $content: space-between);
-			.topLeft {
-				@include flex_center($direction: row, $content: flex-start);
-				img {
-					width: 52px;
-					height: 52px;
-					margin: 24px 0;
-					margin-right: 24px;
-					border-radius: 14px;
-					background-color: #ffffff;
-					border: 1px solid $border_color;
-				}
-				ul {
-					display: flex;
-					li {
-						margin-left: 12px;
-						list-style: none;
-						a {
-							color: #ffffff;
-							.icon {
-								font-size: 1.8rem;
-							}
-						}
-						a:hover {
-							color: #a85859;
-						}
-					}
-				}
-			}
-			.topRight {
-				display: flex;
-				.list {
-					margin-left: 16px;
-					.item {
-						margin: 12px 0;
-						list-style: none;
-						a {
-							@include flex_center($direction: row);
-							.icon {
-								margin-left: 4px;
-							}
-						}
-					}
-				}
-			}
-		}
-		.bottom {
-			width: 100%;
-			@include flex_center($direction: row, $content: space-between);
-			.bottomLeft {
-				.icp {
-					color: $font_tint_color_1;
-				}
-			}
+	.info {
+		padding: 20px;
+		.icp {
+			color: $font_tint_color_2;
 		}
 	}
 }

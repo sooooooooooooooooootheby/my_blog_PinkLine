@@ -10,10 +10,38 @@
 			<nav class="menu">
 				<ul class="mainmenu">
 					<li class="item">
-						<NuxtLink to="/"> about </NuxtLink>
+						<NuxtLink to="/">
+							<Icon class="icon" name="icon-park-solid:bachelor-cap-two" />
+							<span class="text">about</span>
+						</NuxtLink>
 					</li>
+					<li class="item">·</li>
 					<li class="item">
-						<NuxtLink to="/article"> article </NuxtLink>
+						<NuxtLink to="/article">
+							<Icon class="icon" name="icon-park-solid:book-one" />
+							<span class="text">article</span>
+						</NuxtLink>
+					</li>
+					<li class="item">·</li>
+					<li class="item">
+						<NuxtLink to="/wish_target">
+							<Icon class="icon" name="icon-park-solid:tea-drink" />
+							<span class="text">wish</span>
+						</NuxtLink>
+					</li>
+					<li class="item">·</li>
+					<li class="item">
+						<NuxtLink to="https://www.travellings.cn/go.html" target="_blank">
+							<Icon class="icon" name="icon-park-solid:railway" />
+							<span class="text">travelling</span>
+						</NuxtLink>
+					</li>
+					<li class="item">·</li>
+					<li class="item">
+						<NuxtLink to="https://github.com/sooooooooooooooooootheby/" target="_blank">
+							<Icon class="icon" name="mdi:github" />
+							<span class="text">github</span>
+						</NuxtLink>
 					</li>
 				</ul>
 			</nav>

@@ -53,6 +53,7 @@ footer {
 @media (max-width: 900px) {
 	header {
 		width: calc(100vw - 5vw);
+		height: 48px;
 		padding: 0 2.5vw;
 	}
 	main {
