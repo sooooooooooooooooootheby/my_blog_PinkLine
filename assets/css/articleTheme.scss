@@ -47,11 +47,11 @@
 			font-size: 16px;
 			color: #ffffff;
 		}
-		code::after {
-			content: "`";
-		}
 		code::before {
-			content: "`";
+			content: "{ ";
+		}
+		code::after {
+			content: " }";
 		}
 
 		th {
@@ -93,7 +93,7 @@
 		}
 		h1 {
 			padding-bottom: 4px;
-			border-bottom: 1px dashed #FFFFFF;
+			border-bottom: 1px dashed #ffffff;
 		}
 		ul {
 			margin: 24px;
