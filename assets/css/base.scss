@@ -8,6 +8,11 @@
 body {
 	color: $font_color;
 	background-color: $background_color;
+	background-image: url(/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right top;
+	background-attachment: fixed;
 }
 
 @font-face {
