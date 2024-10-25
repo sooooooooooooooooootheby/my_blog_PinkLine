@@ -12,7 +12,7 @@
 					<li class="item">
 						<NuxtLink to="/">
 							<Icon class="icon" name="icon-park-solid:bachelor-cap-two" />
-							<span class="text">about</span>
+							<span class="text">Home</span>
 						</NuxtLink>
 					</li>
 					<li class="item">·</li>
@@ -27,13 +27,6 @@
 						<NuxtLink to="https://www.travellings.cn/go.html" target="_blank">
 							<Icon class="icon" name="icon-park-solid:railway" />
 							<span class="text">travelling</span>
-						</NuxtLink>
-					</li>
-					<li class="item">·</li>
-					<li class="item">
-						<NuxtLink to="https://github.com/sooooooooooooooooootheby/" target="_blank">
-							<Icon class="icon" name="mdi:github" />
-							<span class="text">github</span>
 						</NuxtLink>
 					</li>
 				</ul>

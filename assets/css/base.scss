@@ -1,7 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: JB-Medium, PingFang-l;
+	font-family: pointfree, PingFang-l;
 	transition: 0.2s;
 }
 
@@ -28,6 +28,11 @@ body {
 @font-face {
 	font-family: PingFang-m;
 	src: url("~/assets/typeface/PingFang-m.otf");
+	font-display: swap;
+}
+@font-face {
+	font-family: pointfree;
+	src: url("~/assets/typeface/pointfree.ttf");
 	font-display: swap;
 }
 

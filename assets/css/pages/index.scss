@@ -1,75 +1,107 @@
 .home {
-    .one {
-        >div {
-            margin-top: 32px;
-        }
-        .greet {
-            .greet_title1, .greet_title2 {
-                font-size: 2.5rem;
-            }
-            .greet_title2::after {
-                content: " sooooooooooooooooootheby";
-            }
-            .greet_title3 {
-                margin: 4px 0;
-                color: $font_tint_color_2;
-                .icon {
-                    margin-right: 8px;
-                }
-            }
-        }
-        .content {
-            .title {
-                font-size: 1.4rem;
-                font-family: PingFang-m;
-            }
+	.one {
+		> div {
+			margin-top: 32px;
+		}
+		.greet {
+			.greet_title1,
+			.greet_title2 {
+				font-size: 2.5rem;
+			}
+			.greet_title2::after {
+				content: " sooooooooooooooooootheby";
+			}
+			.greet_title3 {
+				margin: 4px 0;
+				color: $font_tint_color_2;
+				.icon {
+					margin-right: 8px;
+				}
+			}
+		}
+		.content {
+			.title {
+				font-size: 1.4rem;
+				font-family: PingFang-m;
+			}
+			ul {
+				li {
+					margin: 6px 0;
+					p {
+						text-wrap: wrap;
+						word-break: break-all;
+					}
+				}
+			}
+		}
+        .skill {
             ul {
                 li {
-                    margin: 6px 0;
-                    list-style-type: "🌕 ";
+                    list-style-type: "🚀 ";
                 }
             }
         }
-        .friend {
+        .project {
             ul {
-                display: flex;
-                flex-wrap: wrap;
                 li {
-                    width: 88px;
-                    height: 31px;
-                    margin-right: 12px;
-                    overflow: hidden;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        cursor: pointer;
-                    }
+                    list-style-type: "📦 ";
                 }
             }
         }
-    }
+        .api {
+            ul {
+                li {
+                    list-style-type: "🔌 ";
+                }
+            }
+        }
+		.friend {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				li {
+					width: 88px;
+					height: 31px;
+					margin-right: 12px;
+					overflow: hidden;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+        .contact {
+            ul {
+                li {
+                    list-style-type: "✉️ ";
+                }
+            }
+        }
+	}
 }
 
 @media (max-width: 900px) {
-    .home {
-        padding: 0 20px;
-        .one {
-            .greet {
-                .greet_title2::after {
-                    content: "s22y"
-                }
-            }
-            .content {
-                ul {
-                    margin-left: 20px;
-                }
-            }
-            .friend {
-                ul {
-                    margin-left: 0;
-                }
-            }
-        }
-    }
+	.home {
+		padding: 0 20px;
+		.one {
+			.greet {
+				.greet_title2::after {
+					content: "s22y";
+				}
+			}
+			.content {
+				ul {
+					margin-left: 20px;
+				}
+			}
+			.friend {
+				ul {
+					margin-left: 0;
+				}
+			}
+		}
+	}
 }

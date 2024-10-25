@@ -26,7 +26,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="content project">
+			<div class="content api">
 				<span class="title"> Api </span>
 				<ul>
 					<li v-for="(item, index) in api" :key="index">
@@ -48,9 +48,15 @@
 			<div class="content contact">
 				<span class="title"> 联系 </span>
 				<ul>
-					<li>Github: <a href="https://github.com/sooooooooooooooooootheby" target="_blank">https://github.com/sooooooooooooooooootheby</a></li>
-					<li>Email: sooooooooooooooooootheby@gmail.com</li>
-					<li>Discord: sooooooooooooooooootheby</li>
+					<li>
+						<p>Github: <a href="https://github.com/sooooooooooooooooootheby" target="_blank">https://github.com/sooooooooooooooooootheby</a></p>
+					</li>
+					<li>
+						<p>Email: sooooooooooooooooootheby@gmail.com</p>
+					</li>
+					<li>
+						<p>Discord: sooooooooooooooooootheby</p>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -59,7 +65,7 @@
 
 <script setup>
 useHead({
-	title: "about",
+	title: "welcome to my blog",
 });
 const skill = ref(["JavaScript", "Vue.js", "Node.js", "C", "Kotlin", "MySql"]);
 const project = ref([
