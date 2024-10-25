@@ -9,7 +9,7 @@
 			</div>
 			<div class="introduce">
 				<p class="introduce_1">大学在读, 专业是计算机网络技术.</p>
-				<p class="introduce_2">目前在备战专升本考试, 业余时间会做一些小玩意, 可以去我的<a href="https://github.com/sooooooooooooooooootheby">Github主页</a>查看.</p>
+				<p class="introduce_2">目前在备战专升本考试, 业余时间会做一些小玩意, 可以去我的<a href="https://github.com/sooooooooooooooooootheby?tab=repositories">Github</a>查看.</p>
 			</div>
 			<div class="content skill">
 				<span class="title"> 技术 </span>
@@ -45,6 +45,14 @@
 					</li>
 				</ul>
 			</div>
+			<div class="content contact">
+				<span class="title"> 联系 </span>
+				<ul>
+					<li>Github: <a href="https://github.com/sooooooooooooooooootheby" target="_blank">https://github.com/sooooooooooooooooootheby</a></li>
+					<li>Email: sooooooooooooooooootheby@gmail.com</li>
+					<li>Discord: sooooooooooooooooootheby</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </template>
@@ -59,6 +67,11 @@ const project = ref([
 		title: "网易云无损解析",
 		description: "如果你苦于没有黑胶会员或者想要转战本地播放器, 不妨试试这个网站, 它可以下载无损音乐",
 		url: "https://neteasepage.sooooooooooooooooootheby.top/",
+	},
+	{
+		title: "Discord 表情贴纸下载器",
+		description: "这是一个可以下载discord服务器中表情和贴纸的下载工具",
+		url: "https://dge.sooooooooooooooooootheby.top/",
 	},
 ]);
 const api = ref([
