@@ -48,6 +48,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         if: ${{ steps.pkgman.outputs.package_manager == 'pnpm' }}
         name: Install pnpm
+        with:
+          version: 8 # 或者您需要的特定 pnpm 版本
         id: pnpm-install
 
       - uses: actions/setup-node@v4
