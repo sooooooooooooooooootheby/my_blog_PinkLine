@@ -14,11 +14,13 @@
     "@nuxthq/studio": "^2.1.1",
     "nuxt": "^3.13.0",
     "pinia": "^2.2.4",
+    "rss": "^1.2.2",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxt/icon": "^1.5.6",
+    "@types/rss": "^0.0.32",
     "sass": "^1.79.5"
   }
 }

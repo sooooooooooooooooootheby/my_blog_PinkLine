@@ -29,6 +29,13 @@
 							<span class="text">travelling</span>
 						</NuxtLink>
 					</li>
+					<li class="item">·</li>
+					<li class="item">
+						<NuxtLink to="/rss.xml" target="_blank">
+							<Icon class="icon" name="icon-park-solid:railway" />
+							<span class="text">RSS</span>
+						</NuxtLink>
+					</li>
 				</ul>
 			</nav>
 		</div>
