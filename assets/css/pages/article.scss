@@ -1,5 +1,5 @@
 .articleList {
-	width: 30vw;
+	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding-top: 48px;
@@ -7,14 +7,17 @@
 	.articleBox {
         margin-bottom: 42px;
 		list-style: none;
+		@include flex_center($direction: row-reverse, $content: flex-end);
 		a {
 			text-decoration: none;
 			.title {
 				font-weight: bold;
-				font-size: 1.4rem;
 			}
 		}
         .time {
+			width: 120px;
+			flex-shrink: 0;
+			margin-right: 12px;
             color: $font_tint_color_1;
         }
         .classify {
