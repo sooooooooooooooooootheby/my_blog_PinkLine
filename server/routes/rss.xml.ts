@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 	for (const doc of blogPosts) {
 		feed.item({
 			title: doc.title ?? "-",
-			url: `https://mokkapps.de${doc._path}`,
+			url: `https://blog.sooooooooooooooooootheby.top/${doc._path}`,
 			date: doc.date,
 			description: doc.description,
 		});
