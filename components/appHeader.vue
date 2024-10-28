@@ -15,24 +15,24 @@
 							<span class="text">Home</span>
 						</NuxtLink>
 					</li>
-					<li class="item">·</li>
+					<li class="item spot">·</li>
 					<li class="item">
 						<NuxtLink to="/article">
 							<Icon class="icon" name="icon-park-solid:book-one" />
 							<span class="text">article</span>
 						</NuxtLink>
 					</li>
-					<li class="item">·</li>
+					<li class="item spot">·</li>
 					<li class="item">
 						<NuxtLink to="https://www.travellings.cn/go.html" target="_blank">
 							<Icon class="icon" name="icon-park-solid:railway" />
 							<span class="text">travelling</span>
 						</NuxtLink>
 					</li>
-					<li class="item">·</li>
+					<li class="item spot">·</li>
 					<li class="item">
 						<NuxtLink to="/rss.xml" target="_blank">
-							<Icon class="icon" name="icon-park-solid:railway" />
+							<Icon class="icon" name="typcn:rss" />
 							<span class="text">RSS</span>
 						</NuxtLink>
 					</li>

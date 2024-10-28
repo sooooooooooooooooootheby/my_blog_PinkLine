@@ -62,16 +62,20 @@
 			.menu {
 				.mainmenu {
 					.item {
+						margin: 0 6px;
 						a {
 							font-size: 0.8rem;
 							.icon {
 								display: flex;
-								font-size: 1.1rem;
+								font-size: 1.2rem;
 							}
 							.text {
 								display: none;
 							}
 						}
+					}
+					.spot {
+						display: none;
 					}
 				}
 			}

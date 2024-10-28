@@ -47,12 +47,11 @@ footer {
 	header {
 		width: calc(100vw - 40px);
 		height: 48px;
-		padding: 0 2.5vw;
+		padding: 64px 2.5vw 0;
 	}
 	main {
 		width: calc(100vw - 40px);
 		padding: 0 20px;
-		padding-top: 83px;
 	}
 	footer {
 		width: calc(100vw - 40px);
