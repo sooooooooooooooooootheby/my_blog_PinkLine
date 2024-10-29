@@ -12,21 +12,24 @@ export default defineNuxtSchema({
 					description: "技术栈",
 					default: ["JavaScript", "Vue.js", "Node.js", "C", "Kotlin", "MySql"],
 				}),
-                project: field({
+				project: field({
 					type: "array",
 					title: "项目",
 					description: "项目列表",
-                }),
-                api: field({
+					default: [],
+				}),
+				api: field({
 					type: "array",
 					title: "api",
 					description: "api列表",
-                }),
-                friend: field({
+					default: [],
+				}),
+				friend: field({
 					type: "array",
 					title: "友链",
 					description: "友链列表",
-                })
+					default: [],
+				}),
 			},
 		}),
 
