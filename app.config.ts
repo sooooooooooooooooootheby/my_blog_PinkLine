@@ -1,17 +1,8 @@
 import { field, group } from "@nuxthq/studio/theme";
 
 export default defineAppConfig({
-	icon: {
-		class: "421",
-		mode: "cssads",
-
-		attrs: {
-			"key-219": "asd",
-		},
-
-		size: "123",
-	},
 	index: {
+		name: "Sooooooooooooooooootheby",
 		skill: ["JavaScript", "Vue.js", "Node.js", "C", "Kotlin", "MySql"],
 		project: [
 			{
