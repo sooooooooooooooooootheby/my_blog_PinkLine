@@ -42,5 +42,9 @@ export default defineAppConfig({
       name: "Imken",
       url: "https://imken.moe"
     }]
+  },
+
+  icon: {
+    size: ""
   }
 });
