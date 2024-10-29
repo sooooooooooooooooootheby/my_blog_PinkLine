@@ -1,21 +1,16 @@
 import { field, group } from "@nuxthq/studio/theme";
 
 export default defineAppConfig({
-	parent: group({
-		title: "Index",
-		description: "首页的配置",
-		icon: "i-ph-palette-fill",
-		fields: {
-			primary: field({
-				type: "string",
-				title: "Primary",
-				description: "Primary color of your UI.",
-				icon: "i-ph-palette",
-				default: "sky",
-				required: ["sky", "mint", "rose", "amber"],
-			}),
+	icon: {
+		class: "421",
+		mode: "cssads",
+
+		attrs: {
+			"key-219": "asd",
 		},
-	}),
+
+		size: "123",
+	},
 	index: {
 		skill: ["JavaScript", "Vue.js", "Node.js", "C", "Kotlin", "MySql"],
 		project: [
