@@ -14,13 +14,13 @@
 			<div class="content skill">
 				<span class="title"> 技术 </span>
 				<ul>
-					<li v-for="(item, index) in appConfig.skill" :key="index">{{ item }}</li>
+					<li v-for="(item, index) in appConfig.index.skill" :key="index">{{ item }}</li>
 				</ul>
 			</div>
 			<div class="content project">
 				<span class="title"> 项目 </span>
 				<ul>
-					<li v-for="(item, index) in appConfig.project" :key="index">
+					<li v-for="(item, index) in appConfig.index.project" :key="index">
 						<a :href="item.url" target="_blank"> {{ item.title }} </a>
 						<p>{{ item.description }}</p>
 					</li>
@@ -29,7 +29,7 @@
 			<div class="content api">
 				<span class="title"> Api </span>
 				<ul>
-					<li v-for="(item, index) in appConfig.api" :key="index">
+					<li v-for="(item, index) in appConfig.index.api" :key="index">
 						<a :href="item.url" target="_blank"> {{ item.title }} </a>
 						<p>{{ item.description }}</p>
 					</li>
@@ -38,7 +38,7 @@
 			<div class="content friend">
 				<span class="title"> 朋友们 </span>
 				<ul>
-					<li v-for="(item, index) in appConfig.friend" :key="index">
+					<li v-for="(item, index) in appConfig.index.friend" :key="index">
 						<a :href="item.url" target="_blank">
 							<img class="avatar" :src="`/friend/${item.name}.webp`" alt="avatar" />
 						</a>
