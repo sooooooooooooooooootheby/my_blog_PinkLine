@@ -13,6 +13,9 @@ export default defineNuxtConfig({
 			routes: ["/rss.xml"],
 		},
 	},
+	studio: {
+		enabled: true,
+	},
 
 	css: ["~/assets/css/base.scss"],
 
