@@ -34,27 +34,27 @@
 				}
 			}
 		}
-        .skill {
-            ul {
-                li {
-                    list-style-type: "🚀 ";
-                }
-            }
-        }
-        .project {
-            ul {
-                li {
-                    list-style-type: "📦 ";
-                }
-            }
-        }
-        .api {
-            ul {
-                li {
-                    list-style-type: "🔌 ";
-                }
-            }
-        }
+		.skill {
+			ul {
+				li {
+					list-style-type: "🚀 ";
+				}
+			}
+		}
+		.project {
+			ul {
+				li {
+					list-style-type: "📦 ";
+				}
+			}
+		}
+		.api {
+			ul {
+				li {
+					list-style-type: "🔌 ";
+				}
+			}
+		}
 		.friend {
 			ul {
 				display: flex;
@@ -73,21 +73,28 @@
 				}
 			}
 		}
-        .contact {
-            ul {
-                li {
-                    list-style-type: "✉️ ";
-                }
-            }
-        }
+		.contact {
+			ul {
+				li {
+					list-style-type: "✉️ ";
+				}
+			}
+		}
 	}
 }
 
 @media (max-width: 900px) {
 	.home {
 		padding: 0 20px;
+		* {
+			font-size: 0.9rem;
+		}
 		.one {
 			.greet {
+				.greet_title1,
+				.greet_title2 {
+					font-size: 2rem;
+				}
 				.greet_title2::after {
 					content: " s22y";
 				}

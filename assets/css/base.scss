@@ -73,11 +73,3 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 @import url("~/assets/css/articleTheme.scss");
-
-@media (max-width: 900px) {
-	* {
-		p {
-			font-size: 0.8rem;
-		}
-	}
-}

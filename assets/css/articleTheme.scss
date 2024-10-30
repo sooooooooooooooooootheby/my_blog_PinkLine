@@ -6,11 +6,12 @@
 
 		blockquote {
 			margin: 12px 0;
-			padding: 24px;
-			background-color: #041420;
-			border-radius: 12px;
+			padding: 12px 24px;
+			border-left: 4px solid #f4c992;
+			font-size: 0.9rem;
 			p {
 				margin: 0;
+				line-height: calc(0.8rem + 4px);
 			}
 		}
 		p {
@@ -28,6 +29,7 @@
 				margin: 0;
 				padding: 0;
 				background-color: transparent;
+				font-size: 0.8rem;
 			}
 			code::after {
 				content: "";
@@ -43,29 +45,14 @@
 			margin: 0 4px;
 			padding: 2px 4px;
 			border-radius: 4px;
-			font-size: 16px;
 			color: #ffffff;
+			font-size: 0.9rem;
 		}
 		code::before {
 			content: "{ ";
 		}
 		code::after {
 			content: " }";
-		}
-
-		th {
-			font: bold 18px;
-			color: #ffffff;
-			border: 1px solid #a7ae8d;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			text-align: left;
-			padding: 6px 6px 6px 12px;
-		}
-		td {
-			border: 1px solid #a7ae8d;
-			font-size: 14px;
-			padding: 6px 6px 6px 12px;
 		}
 
 		img {
@@ -99,6 +86,27 @@
 			li {
 				margin: 8px 0;
 			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.articleContent {
+		blockquote {
+			p {
+				font-size: 0.7rem;
+			}
+		}
+		p {
+			font-size: 0.8rem;
+		}
+		pre {
+			code {
+				font-size: 0.6rem !important;
+			}
+		}
+		code {
+			font-size: 0.7rem !important;
 		}
 	}
 }

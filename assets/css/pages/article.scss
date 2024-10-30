@@ -5,27 +5,24 @@
 	padding-top: 48px;
 
 	.articleBox {
-        margin-bottom: 42px;
+		margin-bottom: 42px;
 		list-style: none;
 		@include flex_center($direction: row-reverse, $content: flex-end);
 		a {
 			text-decoration: none;
-			.title {
-				font-weight: bold;
-			}
 		}
-        .time {
+		.time {
 			width: 120px;
 			flex-shrink: 0;
 			margin-right: 12px;
-            color: $font_tint_color_1;
-        }
-        .classify {
-            margin-right: 12px;
-        }
-        .tags {
-            margin-right: 4px;
-        }
+			color: $font_tint_color_1;
+		}
+		.classify {
+			margin-right: 12px;
+		}
+		.tags {
+			margin-right: 4px;
+		}
 	}
 	.articleBox:hover {
 		list-style-type: "📃";
@@ -39,9 +36,13 @@
 			list-style: none;
 			@include flex_center($items: flex-start);
 			a {
+				margin: 4px 0;
 				.title {
-					font-size: 1.2rem;
+					font-size: 1.1rem;
 				}
+			}
+			.time {
+				font-size: 0.9rem;
 			}
 		}
 	}

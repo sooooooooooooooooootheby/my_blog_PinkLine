@@ -9,32 +9,8 @@
 
 @media (max-width: 900px) {
 	.appFooter {
-		.content {
-			margin: 0;
-			padding: 0 20px;
-			.top {
-				flex-direction: column;
-				margin-bottom: 32px;
-				.topLeft {
-					width: 100%;
-					@include flex_center($direction: row);
-					img {
-						display: none;
-					}
-					ul {
-						li {
-							margin: 0 12px;
-						}
-					}
-				}
-			}
-			.bottom {
-				.bottomLeft {
-					p {
-						text-align: center;
-					}
-				}
-			}
+		* {
+			font-size: 0.8rem;
 		}
 	}
 }
