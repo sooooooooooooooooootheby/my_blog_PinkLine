@@ -37,6 +37,7 @@
 		width: 100%;
 		.articleBox {
 			list-style: none;
+			@include flex_center($items: flex-start);
 			a {
 				.title {
 					font-size: 1.2rem;
