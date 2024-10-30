@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
 		feed.item({
 			title: doc.title ?? "-",
 			url: `https://blog.sooooooooooooooooootheby.top/${doc._path}`,
-			date: doc.date,
+			date: doc.time,
 			description: doc.description,
 		});
 	}
