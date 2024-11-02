@@ -43,10 +43,10 @@ button {
 }
 
 a {
-	color: #f4c992;
+	color: $themeColor1;
 }
 a:hover {
-	color: #a85859;
+	color: $themeColor2;
 }
 
 html::-webkit-scrollbar {
