@@ -33,10 +33,13 @@
 	}
 
 	p {
-		margin: 0 0 20px 0;
+		margin: 0 0 10px 0;
 		line-height: 30px;
 		a {
 			text-decoration: none;
+		}
+		img {
+			margin: 0;
 		}
 	}
 	a {
@@ -47,7 +50,7 @@
 		border-bottom: 1px solid $themeColor2;
 	}
 
-	ul {
+	ul,ol {
 		margin: 40px auto;
 		padding: 0 26px;
 
@@ -61,9 +64,16 @@
 	}
 
 	blockquote {
+		margin: 10px 0;
 		border-left: 4px solid $themeColor1;
 		p {
 			padding-left: 16px;
+		}
+		pre {
+			margin: 10px 20px;
+		}
+		ol {
+			margin-left: 20px;
 		}
 	}
 
@@ -77,12 +87,17 @@
 	}
 
 	pre {
+		margin: 10px 0;
 		padding: 24px;
 		background-color: #041420;
 		border-radius: 12px;
 		overflow: scroll;
 		overflow-y: hidden;
 
+		code {
+			margin: 0;
+			background-color: transparent;
+		}
 		code::before {
 			content: "";
 		}
@@ -93,17 +108,23 @@
 	pre::-webkit-scrollbar {
 		height: 0px;
 	}
+	code {
+		margin: 0 4px;
+		border-radius: 4px;
+		color: $themeColor1
+	}
 	code::before {
-		content: " { ";
+		content: " ";
 		color: $themeColor1;
 	}
 	code::after {
-		content: " } ";
+		content: " ";
 		color: $themeColor1;
 	}
 
 	img {
 		width: 100%;
 		border-radius: 12px;
+		margin: 10px 0;
 	}
 }
