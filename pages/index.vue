@@ -59,6 +59,9 @@
 					</li>
 				</ul>
 			</div>
+			<div class="content">
+				<img src="https://moco.yukata.dev/get/@sooooooooooooooooootheby" alt="sooooooooooooooooootheby" />
+			</div>
 		</div>
 	</div>
 </template>
