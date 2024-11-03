@@ -3,12 +3,16 @@
 		<ContentList path="/articles" v-slot="{ list }">
 			<ul>
 				<li class="articleBox" v-for="article in list" :key="article._path">
-					<NuxtLink :to="`${article._path}`">
-						<p class="title">{{ article.title }}</p>
-					</NuxtLink>
-
-					<!-- <p>{{ article.description }}</p> -->
-					<p class="time">{{ handleTime(article.time) }}</p>
+					<div class="info">
+						<p class="time">{{ handleTime(article.data) }}</p>
+						<NuxtLink :to="`${article._path}`">
+							<div>
+								<p class="title">{{ article.title }}</p>
+							</div>
+						</NuxtLink>
+					</div>
+					<p class="categories">{ {{ article.categories }} }</p>
+					<p class="description">{{ article.description }}</p>
 				</li>
 			</ul>
 		</ContentList>

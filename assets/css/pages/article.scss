@@ -6,26 +6,33 @@
 
 	.articleBox {
 		margin-bottom: 42px;
-		list-style: none;
-		@include flex_center($direction: row-reverse, $content: flex-end);
-		a {
-			text-decoration: none;
+		@include flex_center($items: flex-start);
+		.info {
+			display: flex;
+			.time {
+				width: 110px;
+				margin-right: 12px;
+			}
+			a {
+				color: #ffffff;
+				@include flex_center($items: flex-start);
+				> div {
+					display: flex;
+					.title {
+						margin-right: 12px;
+					}
+				}
+			}
 		}
-		.time {
-			width: 120px;
-			flex-shrink: 0;
-			margin-right: 12px;
+		.categories, .description {
+			margin-left: 122px;
+		}
+		.categories {
+			margin-top: 4px;
+		}
+		.description {
 			color: $font_tint_color_1;
 		}
-		.classify {
-			margin-right: 12px;
-		}
-		.tags {
-			margin-right: 4px;
-		}
-	}
-	.articleBox:hover {
-		list-style-type: "📃";
 	}
 }
 
