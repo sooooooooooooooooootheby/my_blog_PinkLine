@@ -9,8 +9,9 @@
 		@include flex_center($items: flex-start);
 		.info {
 			display: flex;
+			align-items: baseline;
 			.time {
-				width: 110px;
+				width: 130px;
 				margin-right: 12px;
 			}
 			a {
@@ -24,8 +25,9 @@
 				}
 			}
 		}
-		.categories, .description {
-			margin-left: 122px;
+		.categories,
+		.description {
+			margin-left: 142px;
 		}
 		.categories {
 			margin-top: 4px;
@@ -42,14 +44,23 @@
 		.articleBox {
 			list-style: none;
 			@include flex_center($items: flex-start);
-			a {
-				margin: 4px 0;
-				.title {
-					font-size: 1.1rem;
+			.info {
+				flex-direction: column;
+				.time {
+					font-size: 0.9rem;
+				}
+				a {
+					margin: 4px 0;
+					> div {
+						.title {
+							font-size: 1.1rem;
+						}
+					}
 				}
 			}
-			.time {
-				font-size: 0.9rem;
+			.categories,
+			.description {
+				margin-left: 0;
 			}
 		}
 	}

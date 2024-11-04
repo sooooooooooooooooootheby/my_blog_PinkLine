@@ -4,13 +4,6 @@
 		height: 100%;
 		margin: 0 auto;
 		@include flex_center($direction: row, $content: space-between);
-		.logo {
-			width: 52px;
-			height: 52px;
-			border-radius: 14px;
-			background-color: #ffffff;
-			border: 1px solid $border_color;
-		}
 		.articleInfo {
 			width: 100%;
 			.classification {
@@ -52,10 +45,6 @@
 		height: 48px;
 		.content {
 			padding: 0 12px;
-			.logo {
-				width: 42px;
-				height: 42px;
-			}
 			.articleInfo {
 			    display: none;
 			}
@@ -66,6 +55,7 @@
 						a {
 							font-size: 0.8rem;
 							.icon {
+								margin: 0 6px;
 								display: flex;
 								font-size: 1.2rem;
 							}
