@@ -11,7 +11,7 @@ file: openWRT
 
 本文仅记录小米路由器 4A 千兆版(R4A)的刷机过程，用于参考作用。
 
-教程来自\[从 0 开始刷小米路由器 4a 千兆版 | 猪猪博客]\(https\://blog.learnonly.xyz/p/630b.html)
+教程来自\[从 0 开始刷小米路由器 4a 千兆版 | 猪猪博客]\(<https://blog.learnonly.xyz/p/630b.html>)
 
 \## 准备工作
 
@@ -19,9 +19,9 @@ file: openWRT
 
 \-   R4A 刷机工具+openWRT
 
-\-   本教程用到的所有工具和固件 https\://www\.123pan.com/s/iTK6Vv-P1hwh.html提取码:0415
+\-   本教程用到的所有工具和固件 [https://www.123pan.com/s/iTK6Vv-P1hwh.html提取码:0415](https://www.123pan.com/s/iTK6Vv-P1hwh.html%E6%8F%90%E5%8F%96%E7%A0%81:0415)
 
-\-   固件来自\[GitHub - MrTaiKe/Action\_OpenWrt\_Xiaomi\_R4AGv2: Xiaomi R4AGv2 Gigabit Router OpenWrt Breed Flash 小米路由器 R4Av2 千兆版]\(https\://github.com/MrTaiKe/Action\_OpenWrt\_Xiaomi\_R4AGv2)
+\-   固件来自\[GitHub - MrTaiKe/Action\_OpenWrt\_Xiaomi\_R4AGv2: Xiaomi R4AGv2 Gigabit Router OpenWrt Breed Flash 小米路由器 R4Av2 千兆版]\(<https://github.com/MrTaiKe/Action_OpenWrt_Xiaomi_R4AGv2>)
 
 \-   ssh & ftp 连接工具，本文使用的是 xshell 和 windows 自带的资源管理器
 
