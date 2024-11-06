@@ -3,7 +3,7 @@
 		<div class="info">
 			<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 				<p class="articleTitle">{{ data.title }}</p>
-				<p class="articleTime">{{ handleTime(data.time) }}</p>
+				<p class="articleTime">{{ handleTime(data.data) }}</p>
 			</ContentQuery>
 		</div>
 		<ContentDoc />
