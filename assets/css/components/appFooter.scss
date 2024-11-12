@@ -1,16 +1,31 @@
 .appFooter {
-	.info {
-		padding: 20px 0;
-		.icp {
-			color: $font_tint_color_2;
-		}
-	}
+    display: flex;
+    justify-content: space-between;
+    .menu {
+        padding: 20px 0;
+        .item {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            a {
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+    .info {
+        padding: 20px 0;
+        .icp {
+            color: $font_tint_color_2;
+        }
+    }
 }
 
 @media (max-width: 900px) {
-	.appFooter {
-		* {
-			font-size: 0.8rem;
-		}
-	}
+    .appFooter {
+        * {
+            font-size: 0.8rem;
+        }
+    }
 }

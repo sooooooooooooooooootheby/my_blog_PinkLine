@@ -1,9 +1,17 @@
 <template>
-	<div class="appFooter">
-		<div class="info">
-			<p class="copyright">Copyright ©2024.sooooooooooooooooootheby All rights reserved</p>
-		</div>
-	</div>
+    <div class="appFooter">
+        <ul class="menu">
+            <li class="item">
+                <NuxtLink to="https://www.travellings.cn/go.html" target="_blank"> TRAVELLING </NuxtLink>
+            </li>
+            <li class="item">
+                <NuxtLink to="/rss.xml" target="_blank"> RSS </NuxtLink>
+            </li>
+        </ul>
+        <div class="info">
+            <p class="copyright">Copyright ©2024.sooooooooooooooooootheby</p>
+        </div>
+    </div>
 </template>
 
 <script setup></script>
