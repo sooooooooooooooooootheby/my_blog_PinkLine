@@ -1,67 +1,34 @@
 .articleList {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-top: 48px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 48px;
 
-	.articleBox {
-		margin-bottom: 42px;
-		@include flex_center($items: flex-start);
-		.info {
-			display: flex;
-			align-items: baseline;
-			.time {
-				width: 130px;
-				margin-right: 12px;
-			}
-			a {
-				color: #ffffff;
-				@include flex_center($items: flex-start);
-				> div {
-					display: flex;
-					.title {
-						margin-right: 12px;
-					}
-				}
-			}
-		}
-		.categories,
-		.description {
-			margin-left: 142px;
-		}
-		.categories {
-			margin-top: 4px;
-		}
-		.description {
-			color: $font_tint_color_1;
-		}
-	}
+    .article {
+        margin-bottom: 24px;
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            .head {
+                @include flex_center($direction: row, $content: flex-start, $items: center);
+                .title {
+                    font-size: 1.2rem;
+                }
+                .time {
+                    display: flex;
+                    margin: 0 12px;
+                    color: $font_tint_color_1;
+                }
+            }
+            .description {
+                color: $font_tint_color_1;
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
-	.articleList {
-		width: 100%;
-		.articleBox {
-			list-style: none;
-			@include flex_center($items: flex-start);
-			.info {
-				flex-direction: column;
-				.time {
-					font-size: 0.9rem;
-				}
-				a {
-					margin: 4px 0;
-					> div {
-						.title {
-							font-size: 1.1rem;
-						}
-					}
-				}
-			}
-			.categories,
-			.description {
-				margin-left: 0;
-			}
-		}
-	}
+    .articleList {
+        width: 100%;
+    }
 }
