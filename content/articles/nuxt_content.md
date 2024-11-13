@@ -2,7 +2,7 @@
 title: nuxtjs/content简单入门
 description: nuxtjs/content是nuxt官方的一个基于文件的CMS,通过content可以很方便地管理文章内容
 data: '2024-10-18T20:25:10.000Z'
-dataed: 2024-11-04T14:06:40.000Z
+dataed: 2024-11-12T14:06:40.000Z
 categories: 前端
 file: nuxt_content
 ---
@@ -53,7 +53,7 @@ content
 
 |                              |                    |
 | ---------------------------- | ------------------ |
-| 文件                         | 路径                |
+| 文件                           | 路径                 |
 | content/index.md             | /                  |
 | content/demo1.md             | /demo2             |
 | content/articles/article1.md | /articles/article1 |
@@ -89,6 +89,29 @@ content
 我们可以通过`v-for`渲染出列表, 并通过`article`去获取文章的信息, 例如路径, 标题, 描述.
 
 在`[...slug].vue`文件中加入`<ContentDoc />`标签, 这样我们点击标题或者描述就可以跳转到文章详细页了.
+
+#### 使用queryContent()渲染
+
+一般来说用`<ContentList />`渲染列表是没问题的, 但是你会发现列表渲染的顺序是随机的, 并不是固定按照某个规则进行渲染.
+
+如果你想要它按照时间或者名字排序, 就需要使用`queryContent()`进行渲染了.
+
+`queryContent()`不是标签, 而是一个方法, 这个方法会获取指定目录下所有文章的信息并作为一个数组暴露出来, 所以需要配合`v-for`进行渲染.
+
+```vue
+<template>
+    <div class="article" v-for="item in articles" :key="item._path">
+        {{ item }}
+    </div>
+</template>
+
+<script setup>
+    const articles = await queryContent("articles")
+        .where({ _path: { $contains: "/articles/" } }) // 获取 /content/articles 目录下所有的文章
+        .sort({ data: -1 }) // data 是 Front-matter 中的信息, 我这里 data 表示创建文章的日期 -1 表示降序排序
+        .find();
+</script>
+```
 
 ### Front-matter
 
