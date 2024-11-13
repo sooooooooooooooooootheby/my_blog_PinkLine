@@ -24,8 +24,13 @@
 
 @media (max-width: 900px) {
     .appFooter {
+        display: flex;
+        flex-direction: column;
         * {
             font-size: 0.8rem;
+        }
+        .menu, .info {
+            padding: 10px 0;
         }
     }
 }
