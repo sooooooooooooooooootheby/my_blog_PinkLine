@@ -33,6 +33,7 @@ header {
 }
 main {
 	width: 700px;
+	min-height: 80vh;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
