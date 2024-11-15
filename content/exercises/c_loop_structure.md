@@ -2,7 +2,7 @@
 title: 循环
 data: '2024-10-31T22:16:40.000Z'
 dataed: null
-categories: C Languaget
+categories: C Language
 ---
 
 
