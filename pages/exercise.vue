@@ -22,21 +22,28 @@ const exercises = await queryContent("exercises")
     .find();
 
 const groupedByCategories = exercises.reduce((acc, exercise) => {
+    // 获取当前 exercise 的 categories 字段
     let categories = exercise.categories;
 
+    // 如果 categories 是一个字符串，拆分成数组并去除每个类别的空格
     if (typeof categories === "string") {
         categories = categories.split(",").map((c) => c.trim());
     }
 
+    // 遍历每个类别
     categories.forEach((category) => {
+        // 如果 acc 中没有该类别，初始化为空数组
         if (!acc[category]) {
             acc[category] = [];
         }
+        // 将当前 exercise 加入到对应类别的数组中
         acc[category].push(exercise);
     });
 
+    // 返回更新后的累加器对象
     return acc;
 }, {});
+
 
 const handleTime = (time) => {
     if (time === null || time === undefined) {
