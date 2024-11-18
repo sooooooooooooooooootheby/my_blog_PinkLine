@@ -22,11 +22,11 @@ export default defineAppConfig({
     api: [{
       title: "网易云音乐api",
       description: "这个是大佬写的非常强大的api服务, 可惜被律师函警告了, fork了一份自己建服务",
-      url: "https://netease.sooooooooooooooooootheby.top/NeteaseCloudMusicApi/"
+      url: "https://api.sooooooooooooooooootheby.top/NeteaseCloudMusicApi/"
     }, {
       title: "网易云无损解析",
       description: "这个是另外一个大佬写的api, 可以解析下载音乐, 很强, 我自己建了服务用来改进了她的解析功能.",
-      url: "https://netease.sooooooooooooooooootheby.top/Netease_url/"
+      url: "https://api.sooooooooooooooooootheby.top/Netease_url/"
     }],
 
     friend: [{
