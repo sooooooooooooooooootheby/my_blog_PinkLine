@@ -17,6 +17,14 @@ export default defineAppConfig({
       title: "Discord 表情贴纸下载器",
       description: "这是一个可以下载discord服务器中表情和贴纸的下载工具",
       url: "https://dge.sooooooooooooooooootheby.top/"
+    }, {
+      title: "服务器监控面板",
+      description: "这是一个服务器性能监测站点",
+      url: "https://server.sooooooooooooooooootheby.top/"
+    }, {
+      title: "flex 试验场",
+      description: "这是学 css 时老师给的试验场, 之前 gitee 也有一份, 还有在线站点, 不过已经下线好久了, 自己搭了一个, 虽然学了很久了, 但是时不时还是会用到.",
+      url: "https://flexbox-lab.vercel.app/"
     }],
 
     api: [{
