@@ -1,6 +1,8 @@
 export default defineNuxtPlugin((nuxtApp) => {
+    // 是否启用
+    const enable = false;
     // 检查是否在客户端运行
-    if (process.client) {
+    if (process.client && enable) {
         const isReducedMotion =
             window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
             window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
