@@ -27,31 +27,11 @@
 			ul {
 				li {
 					margin: 6px 0;
+					margin-left: 24px;
 					p {
 						text-wrap: wrap;
 						word-break: break-all;
 					}
-				}
-			}
-		}
-		.skill {
-			ul {
-				li {
-					list-style-type: "🚀 ";
-				}
-			}
-		}
-		.project {
-			ul {
-				li {
-					list-style-type: "📦 ";
-				}
-			}
-		}
-		.api {
-			ul {
-				li {
-					list-style-type: "🔌 ";
 				}
 			}
 		}
@@ -62,6 +42,7 @@
 				li {
 					width: 88px;
 					height: 31px;
+					margin-left: 0;
 					margin-right: 12px;
 					overflow: hidden;
 					img {
@@ -70,13 +51,6 @@
 						object-fit: cover;
 						cursor: pointer;
 					}
-				}
-			}
-		}
-		.contact {
-			ul {
-				li {
-					list-style-type: "✉️ ";
 				}
 			}
 		}
