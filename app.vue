@@ -7,10 +7,13 @@
 	</main>
 	<footer>
 		<appFooter />
+		<SpeedInsights/>
 	</footer>
 </template>
 
 <script setup>
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+
 useHead({
 	title: "River of star Dreams",
 	meta: [{ name: "description", content: "s22y's webSite" }],

@@ -3,7 +3,7 @@ title: 解决每次连接服务器都要加载配置文件
 description: null
 data: 2024-10-05T23:00:14.000Z
 dataed: null
-description: 后端
+categories: 后端
 file: serverSourceBashrc
 ---
 
