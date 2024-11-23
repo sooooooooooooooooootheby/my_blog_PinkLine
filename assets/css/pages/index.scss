@@ -75,7 +75,10 @@
 			}
 			.content {
 				ul {
-					margin-left: 20px;
+					// margin-left: 20px;
+					li {
+						margin-left: 0;
+					}
 				}
 				img {
 					width: 100%;

@@ -45,6 +45,8 @@
 	a {
 		margin: 0 4px;
 		border-bottom: 1px solid $themeColor1;
+		text-wrap: wrap;
+		word-break: break-all;
 	}
 	a:hover {
 		border-bottom: 1px solid $themeColor2;
