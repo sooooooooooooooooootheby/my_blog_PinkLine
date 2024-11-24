@@ -1,24 +1,30 @@
 .appFooter {
-    display: flex;
-    justify-content: space-between;
-    .menu {
-        padding: 20px 0;
-        .item {
-            list-style: none;
-            display: flex;
-            align-items: center;
-            a {
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: bold;
+    .up {
+        display: flex;
+        justify-content: space-between;
+        .menu {
+            padding: 20px 0;
+            .item {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+        .info {
+            padding: 20px 0;
+            .icp {
+                color: $font_tint_color_2;
             }
         }
     }
-    .info {
-        padding: 20px 0;
-        .icp {
-            color: $font_tint_color_2;
-        }
+    .headerBar {
+        width: 100%;
+        cursor: pointer;
     }
 }
 
@@ -29,7 +35,8 @@
         * {
             font-size: 0.8rem;
         }
-        .menu, .info {
+        .menu,
+        .info {
             padding: 10px 0;
         }
     }
