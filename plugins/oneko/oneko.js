@@ -1,6 +1,18 @@
+/**
+ *
+ * 原作者: adryd325: https://github.com/adryd325
+ * 修改: s22y: https://github.com/sooooooooooooooooootheby
+ *
+ * original author: adryd325: https://github.com/adryd325
+ * revamp: s22y: https://github.com/sooooooooooooooooootheby
+ *
+ */
+
+import nekoFile from "~/plugins/oneko/oneko.gif";
+
 export default defineNuxtPlugin((nuxtApp) => {
     // 是否启用
-    const enable = false;
+    const enable = true;
     // 检查是否在客户端运行
     if (process.client && enable) {
         const isReducedMotion =
@@ -17,8 +29,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         let mousePosX = 0;
         let mousePosY = 0;
 
-        // please use data-neko="true" on your A elements that link to another site with oneko-webring.js instead of this
-        // this is deprecated and will eventually be removed
         const nekoSites = ["localhost"];
 
         try {
@@ -26,7 +36,6 @@ export default defineNuxtPlugin((nuxtApp) => {
                 .replace("?", "")
                 .split("&")
                 .map((keyvaluepair) => keyvaluepair.split("="));
-            // This is so much repeated code, I don't like it
             tmp = searchParams.find((a) => a[0] == "catx");
             if (tmp && tmp[1]) nekoPosX = parseInt(tmp[1]);
             tmp = searchParams.find((a) => a[0] == "caty");
@@ -70,12 +79,18 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
         document.addEventListener("click", onClick);
 
+        // 每当动画播放一帧时，这个计数器就会增加。这个变量通常用于控制动画的速度、循环播放等。
         let frameCount = 0;
+        // 这个变量通常用于检测用户是否长时间没有与页面交互，从而触发相应的空闲动画或行为。
         let idleTime = 0;
+        // 这个变量可以是任何类型的对象，比如一个动画实例或一个函数，用于在用户长时间不活动时播放。
         let idleAnimation = null;
+        // 这个变量与frameCount类似，但专门用于跟踪空闲动画的播放进度。
         let idleAnimationFrame = 0;
 
+        // neko 速度
         const nekoSpeed = 10;
+        // 截取 neko 在图片中的位置
         const spriteSets = {
             idle: [[-3, -3]],
             alert: [[-7, -3]],
@@ -139,6 +154,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             ],
         };
 
+        // neko 初始化
         function init() {
             nekoEl.id = "oneko";
             nekoEl.ariaHidden = true;
@@ -150,8 +166,9 @@ export default defineNuxtPlugin((nuxtApp) => {
             nekoEl.style.left = `${nekoPosX - 16}px`;
             nekoEl.style.top = `${nekoPosY - 16}px`;
             nekoEl.style.zIndex = Number.MAX_VALUE;
+            nekoEl.style.zIndex = 9999;
 
-            let nekoFile = "./oneko.gif";
+            // let nekoFile = "~/plugins/oneko/oneko.gif";
             const curScript = document.currentScript;
             if (curScript && curScript.dataset.cat) {
                 nekoFile = curScript.dataset.cat;
@@ -168,10 +185,9 @@ export default defineNuxtPlugin((nuxtApp) => {
             window.requestAnimationFrame(onAnimationFrame);
         }
 
+        // 创建动画循环
         let lastFrameTimestamp;
-
         function onAnimationFrame(timestamp) {
-            // Stops execution if the neko element is removed from DOM
             if (!nekoEl.isConnected) {
                 return;
             }
@@ -186,20 +202,24 @@ export default defineNuxtPlugin((nuxtApp) => {
             window.requestAnimationFrame(onAnimationFrame);
         }
 
+        // 根据帧数来更新 neko 的显示图像
         function setSprite(name, frame) {
+            // 移动 *
             const sprite = spriteSets[name][frame % spriteSets[name].length];
+            // 动画切换 *
             nekoEl.style.backgroundPosition = `${sprite[0] * 32}px ${sprite[1] * 32}px`;
         }
 
+        // neko 停止时调用
         function resetIdleAnimation() {
             idleAnimation = null;
             idleAnimationFrame = 0;
         }
 
+        // 闲置
         function idle() {
             idleTime += 1;
 
-            // every ~ 20 seconds
             if (idleTime > 10 && Math.floor(Math.random() * 200) == 0 && idleAnimation == null) {
                 let avalibleIdleAnimations = ["sleeping", "scratchSelf"];
                 if (nekoPosX < 32) {
@@ -245,6 +265,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             idleAnimationFrame += 1;
         }
 
+        // 控制 neko 的动画
         function frame() {
             frameCount += 1;
             const diffX = nekoPosX - mousePosX;
@@ -261,7 +282,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             if (idleTime > 1) {
                 setSprite("alert", 0);
-                // count down after being alerted before moving
                 idleTime = Math.min(idleTime, 7);
                 idleTime -= 1;
                 return;

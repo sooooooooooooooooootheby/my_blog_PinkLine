@@ -3,6 +3,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 
 	modules: ["@nuxt/icon", "@nuxt/content", "@nuxthq/studio"],
+	plugins: ["~/plugins/oneko/oneko"],
 	content: {
 		highlight: {
 			theme: "github-dark",
