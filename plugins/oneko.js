@@ -9,7 +9,7 @@
  *
  */
 
-import nekoFile from "~/plugins/oneko/oneko.gif";
+const nekoFile = "/oneko.gif";
 
 export default defineNuxtPlugin((nuxtApp) => {
     // 是否启用
