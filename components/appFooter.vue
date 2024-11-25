@@ -16,7 +16,6 @@
                 <p class="copyright">Copyright ©2024.sooooooooooooooooootheby</p>
             </div>
         </div>
-        <img src="/headerBar.webp" alt="headerBar" class="headerBar" />
     </div>
 </template>
 
