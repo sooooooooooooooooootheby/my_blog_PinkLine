@@ -60,7 +60,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="content">
+			<div class="content" v-show="checkDomain()">
 				<img src="https://moco.yukata.dev/get/@sooooooooooooooooootheby" alt="sooooooooooooooooootheby" />
 			</div>
 		</div>
@@ -76,6 +76,17 @@ useHead({
 const randomImage = () => {
 	const num = Math.floor(Math.random() * (8 - 1) + 1);
 	return `/carousel/${num}.webp`;
+}
+
+const checkDomain = () => {
+    const domain = window.location.hostname;
+    const isLocalhost = domain === 'localhost';
+    const is192168 = domain.startsWith('192.168.');
+
+    if (isLocalhost || is192168) {
+    	return false;
+    }
+	return true
 }
 </script>
 
