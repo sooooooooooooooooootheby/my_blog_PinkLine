@@ -70,9 +70,9 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="content" v-show="checkDomain()">
+            <div class="content" v-show="checkDomain()">
                 <img src="https://moco.yukata.dev/get/@sooooooooooooooooootheby" alt="sooooooooooooooooootheby" />
-            </div> -->
+            </div>
         </div>
     </div>
 </template>
