@@ -27,6 +27,15 @@
 			.title {
 				font-size: 1.4rem;
 				font-family: PingFang-m;
+				a {
+					color: #FFFFFF;
+					text-decoration: none;
+					border-bottom: 2px solid #FFFFFF;
+				}
+				a:hover {
+					color: #274272;
+					border-bottom: 2px solid #274272;
+				}
 			}
 			ul {
 				li {

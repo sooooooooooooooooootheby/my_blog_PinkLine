@@ -41,8 +41,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="content friend">
-                <span class="title"> 朋友们 </span>
+            <div class="content friend" id="friend">
+                <span class="title"><NuxtLink to="/friend"> 朋友们 </NuxtLink></span>
                 <ul>
                     <li v-for="(item, index) in appConfig.index.friend" :key="index">
                         <a :href="item.url" target="_blank">
@@ -70,9 +70,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="content" v-show="checkDomain()">
+            <!-- <div class="content" v-show="checkDomain()">
                 <img src="https://moco.yukata.dev/get/@sooooooooooooooooootheby" alt="sooooooooooooooooootheby" />
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
