@@ -49,6 +49,9 @@ export default defineAppConfig({
     }, {
       name: "Imken",
       url: "https://imken.moe"
+    }, {
+      name: "Ariasaka",
+      url: "https://blog.yaria.top"
     }]
   },
 
