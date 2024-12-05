@@ -46,7 +46,7 @@
                 <ul>
                     <li v-for="(item, index) in appConfig.index.friend" :key="index">
                         <a :href="item.url" target="_blank">
-                            <img class="avatar" :src="`/friend/${item.name}.webp`" alt="avatar" />
+                            <img class="avatar" :src="item.button" alt="avatar" />
                         </a>
                     </li>
                 </ul>
