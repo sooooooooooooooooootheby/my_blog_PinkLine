@@ -57,6 +57,10 @@ export default defineAppConfig({
       name: "Ariasaka",
       url: "https://blog.yaria.top",
       button: "/friend/Ariasaka.webp"
+    }, {
+      name: "ZLA 小站",
+      url: "https://www.zla.pub/",
+      button: "/friend/zla.webp"
     }]
   },
 
