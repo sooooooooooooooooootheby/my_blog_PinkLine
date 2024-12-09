@@ -1,25 +1,23 @@
 .appFooter {
-    .up {
-        display: flex;
-        justify-content: space-between;
-        .menu {
-            padding: 20px 0;
-            .item {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                a {
-                    text-decoration: none;
-                    font-size: 1rem;
-                    font-weight: bold;
-                }
+    display: flex;
+    flex-direction: column;
+    .menu {
+        padding: 5px 0;
+        .item {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            a {
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
             }
         }
-        .info {
-            padding: 20px 0;
-            .icp {
-                color: $font_tint_color_2;
-            }
+    }
+    .info {
+        padding: 5px 0;
+        .icp {
+            color: $font_tint_color_2;
         }
     }
 }
@@ -28,12 +26,9 @@
     .appFooter {
         display: flex;
         flex-direction: column;
-        * {
-            font-size: 0.8rem;
-        }
         .menu,
         .info {
-            padding: 10px 0;
+            padding: 5px 0;
         }
     }
 }
