@@ -11,14 +11,14 @@
 				<ul class="mainmenu">
 					<li class="item">
 						<NuxtLink to="/">
-							<Icon class="icon" name="icon-park-solid:cup" />
+							<Icon class="icon" name="gravity-ui:cherry" />
 							<span class="text">Home</span>
 						</NuxtLink>
 					</li>
 					<li class="item spot">·</li>
 					<li class="item">
 						<NuxtLink to="/article">
-							<Icon class="icon" name="icon-park-solid:web-page" />
+							<Icon class="icon" name="gravity-ui:book-open" />
 							<span class="text">article</span>
 						</NuxtLink>
 					</li>

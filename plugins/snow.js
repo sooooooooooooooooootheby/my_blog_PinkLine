@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         document.body.append(canvas);
 
         let snowCount = 150;
-        let speed = Math.random() * 2 + 1;
+        let speed = Math.random() * 2 + 0.5;
         if (viewWidth < 768) {
             snowCount = 50;
             speed = Math.random() * 1 + 0.1;
