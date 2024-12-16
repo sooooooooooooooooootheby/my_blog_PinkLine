@@ -16,14 +16,18 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         document.body.append(canvas);
 
-        const snowCount = 150;
+        let snowCount = 150;
+        let speed = Math.random() * 2 + 1;
+        if (viewWidth < 768) {
+            snowCount = 50;
+            speed = Math.random() * 1 + 0.1;
+        }
         const snowflakes = [];
 
         for (let i = 0; i < snowCount; i++) {
             const x = Math.random() * viewWidth;
             const y = Math.random() * viewHeight;
             const radius = Math.random() * (2 - 1) + 1;
-            const speed = Math.random() * 2 + 1;
             const direction = Math.random() * 2 - 1;
 
             snowflakes.push({
