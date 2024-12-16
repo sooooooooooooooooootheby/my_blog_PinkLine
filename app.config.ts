@@ -61,6 +61,11 @@ export default defineAppConfig({
       name: "ZLA 小站",
       url: "https://www.zla.pub/",
       button: "/friend/zla.webp"
+    },
+    {
+      name: "Pinpe 的云端",
+      url: "https://pinpe.top",
+      button: "https://pinpe.top/head.jpg"
     }]
   },
 
