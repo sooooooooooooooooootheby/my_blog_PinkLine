@@ -2,9 +2,6 @@
     <div class="appFooter">
         <ul class="menu">
             <li class="item">
-                <NuxtLink to="https://www.travellings.cn/go.html" target="_blank"> TRAVELLING </NuxtLink>
-            </li>
-            <li class="item">
                 <NuxtLink to="/rss.xml" target="_blank"> RSS </NuxtLink>
             </li>
             <li class="item">
