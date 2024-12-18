@@ -65,9 +65,6 @@
                     <li>
                         <p>Email: sooooooooooooooooootheby@gmail.com</p>
                     </li>
-                    <li>
-                        <p>Discord: sooooooooooooooooootheby</p>
-                    </li>
                 </ul>
             </div>
             <div class="content" v-show="checkDomain()">
