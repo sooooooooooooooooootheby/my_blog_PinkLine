@@ -25,6 +25,10 @@ export default defineAppConfig({
       title: "flex 试验场",
       description: "这是学 css 时老师给的试验场, 之前 gitee 也有一份, 还有在线站点, 不过已经下线好久了, 自己搭了一个, 虽然学了很久了, 但是时不时还是会用到.",
       url: "https://flexbox-lab.vercel.app/"
+    }, {
+      title: "Wonderland tea party",
+      description: "这是我自己写的ai聊天应用, 目前还不支持游客模式, 所以你点开也是什么都做不了的 XD",
+      url: "https://github.com/sooooooooooooooooootheby/Wonderland-tea-party"
     }],
 
     api: [{
