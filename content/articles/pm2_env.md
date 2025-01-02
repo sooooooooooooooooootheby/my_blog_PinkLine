@@ -1,5 +1,5 @@
 ---
-title: pm2无法自动读取环境变量
+title: [随记]pm2无法自动读取环境变量
 description: ""
 data: 2025-01-01T15:42:14.000Z
 dataed: null
