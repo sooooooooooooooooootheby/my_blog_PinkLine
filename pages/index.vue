@@ -17,6 +17,12 @@
                 </p>
             </div>
             <img :src="randomImage()" alt="headerBar" class="headerBar" />
+            <div class="content target">
+                <span class="title"> 2025 年目标 ( 0 / 2 ) </span>
+                <ul>
+                    <li v-for="(item, index) in appConfig.index.target" :key="index">{{ item }}</li>
+                </ul>
+            </div>
             <div class="content skill">
                 <span class="title"> 技术 </span>
                 <ul>
