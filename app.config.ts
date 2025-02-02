@@ -2,7 +2,7 @@ export default defineAppConfig({
   index: {
     target: [
       "通过专升本考试 or 找到工作",
-      "开发一个原生的 android 应用程序并持续维护到2026年"
+      "开发一个<del>原生的</del> android 应用程序并持续维护到2026年"
     ],
 
     skill: [

@@ -20,7 +20,9 @@
             <div class="content target">
                 <span class="title"> 2025 年目标 ( 0 / 2 ) </span>
                 <ul>
-                    <li v-for="(item, index) in appConfig.index.target" :key="index">{{ item }}</li>
+                    <li v-for="(item, index) in appConfig.index.target" :key="index">
+                        <p v-html="item"></p>
+                    </li>
                 </ul>
             </div>
             <div class="content skill">
