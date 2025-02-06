@@ -19,4 +19,8 @@ file: nuxt_setup_error
 
 将 `tar` 的值复制到地址栏打开, 浏览器就会下载一个压缩包, 直接将里面的文件夹解压出来, 这个文件夹就是 nuxt.js 的初始demo了, 把它复制到你需要的地方然后就能够正常使用了.
 
+```
+https://codeload.github.com/nuxt/starter/tar.gz/refs/heads/v3
+```
+
 ![压缩包](/image/nuxt_setup_error/3.webp)
