@@ -91,7 +91,7 @@ useHead({
 const randomImage = () => {
     // const num = Math.floor(Math.random() * (8 - 1) + 1);
     // return `/carousel/${num}.webp`;
-    return `/carousel/0.webp`;
+    return `/carousel/Canvas-Ruom.webp`;
 };
 
 const checkDomain = () => {
