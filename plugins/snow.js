@@ -73,6 +73,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
 
         // 启动动画
-        drawSnowflakes();
+        // drawSnowflakes();
     }
 });

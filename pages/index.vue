@@ -7,6 +7,7 @@
                 <p class="greet_title3"><Icon class="icon" name="icon-park-solid:connect-address-two" />现居 中国南宁.</p>
                 <p class="greet_title3"><Icon class="icon" name="icon-park-solid:blossom" /><del>梦想是躺平什么都不用做.</del>已经是个尸体了</p>
             </div>
+            <img :src="randomImage()" alt="headerBar" class="headerBar" />
             <div class="introduce">
                 <p class="introduce_1">在读, 专业是计算机网络技术.</p>
                 <p class="introduce_2">
@@ -16,7 +17,6 @@
                     >看看. 如果能够帮到你我会很开心.
                 </p>
             </div>
-            <img :src="randomImage()" alt="headerBar" class="headerBar" />
             <div class="content target">
                 <span class="title"> 2025 年目标 ( 0 / 2 ) </span>
                 <ul>
