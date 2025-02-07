@@ -22,6 +22,13 @@
 							<span class="text">article</span>
 						</NuxtLink>
 					</li>
+					<li class="item spot">·</li>
+					<li class="item">
+						<NuxtLink to="/notes">
+							<Icon class="icon" name="gravity-ui:paper-plane" />
+							<span class="text">notes</span>
+						</NuxtLink>
+					</li>
 				</ul>
 			</nav>
 		</div>
