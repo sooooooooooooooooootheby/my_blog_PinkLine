@@ -4,12 +4,12 @@
             <li class="item">
                 <NuxtLink to="/rss.xml" target="_blank"> RSS </NuxtLink>
             </li>
-            <li class="item">
+            <!-- <li class="item">
                 <NuxtLink to="/exercise">EXERCISE</NuxtLink>
-            </li>
+            </li> -->
         </ul>
         <div class="info">
-            <p class="copyright">Copyright ©2024.sooooooooooooooooootheby</p>
+            <p class="copyright">Copyright ©2024~2025.sooooooooooooooooootheby</p>
         </div>
     </div>
 </template>
