@@ -3,7 +3,7 @@
         <ContentList path="/notes" :sort="[['data.date', 'desc']]" v-slot="{ list }">
             <div v-for="article in list" :key="article._path" class="article">
                 <ContentRendererMarkdown :value="article" />
-                {{ handleTime(article.data) }}
+                <span class="time">{{ handleTime(article.data) }}</span>
             </div>
         </ContentList>
     </main>
@@ -44,6 +44,9 @@ const handleTime = (time) => {
 .article {
     margin-bottom: 32px;
     padding-bottom: 12px;
-    border-bottom: 1px solid #ffffff7a;
+    border-bottom: 1px dashed #ffffff7a;
+}
+.time {
+    font-size: 0.9rem;
 }
 </style>
