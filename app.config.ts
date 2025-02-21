@@ -11,7 +11,8 @@ export default defineAppConfig({
       "Node.js",
       "C",
       "Kotlin",
-      "MySql"
+      "MySql",
+      "Nuxt3.js"
     ],
 
     project: [{

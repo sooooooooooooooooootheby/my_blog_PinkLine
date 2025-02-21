@@ -5,7 +5,7 @@
                 <p class="greet_title1">Hi.👋</p>
                 <p class="greet_title2">I'm</p>
                 <p class="greet_title3"><Icon class="icon" name="icon-park-solid:connect-address-two" />现居 中国南宁.</p>
-                <p class="greet_title3"><Icon class="icon" name="icon-park-solid:blossom" /><del>梦想是躺平什么都不用做.</del>已经是个尸体了</p>
+                <p class="greet_title3"><Icon class="icon" name="icon-park-solid:blossom" />梦想是躺平什么都不用做.</p>
             </div>
             <!-- <img :src="randomImage()" alt="headerBar" class="headerBar" /> -->
             <div class="introduce">
@@ -16,6 +16,7 @@
                         >Github</a
                     >看看. 如果能够帮到你我会很开心.
                 </p>
+                <p class="introduce_3">买了新域名辣! 心心念念的.moe, 用压岁钱买的(•‾⌣‾•), 新域名 s22y.moe, 旧的域名等8月份过期就不续了.</p>
             </div>
             <div class="content target">
                 <span class="title"> 2025 年目标 ( 0 / 2 ) </span>
