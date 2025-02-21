@@ -72,7 +72,7 @@
                         </p>
                     </li>
                     <li>
-                        <p>Email: sooooooooooooooooootheby@gmail.com</p>
+                        <p>Email: sooooooooooooooooootheby@e.s22y.moe</p>
                     </li>
                 </ul>
             </div>
