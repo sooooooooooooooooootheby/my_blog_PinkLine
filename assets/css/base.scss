@@ -1,74 +1,33 @@
 * {
-	margin: 0;
-	padding: 0;
-	font-family: JB-Medium, PingFang-l;
+    margin: 0;
+    padding: 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    small {
+        font-family: sc;
+    }
+
+    code,
+    pre {
+        font-family: JB-Medium !important;
+    }
 }
 
-body {
-	color: $font_color;
-	background-color: $background_color;
-	background-image: url(/background.webp);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: right top;
-	background-attachment: fixed;
+::selection {
+    background-color: #d0785b81;
 }
 
 @font-face {
-	font-family: JB-Medium;
-	src: url("~/assets/typeface/JetBrainsMono-Medium.woff2");
-	font-display: swap;
+    font-family: JB-Medium;
+    src: url("~/assets/typeface/JetBrainsMono-Medium.woff2");
+    font-display: swap;
 }
 @font-face {
-	font-family: PingFang-l;
-	src: url("~/assets/typeface/PingFang-l.otf");
-	font-display: swap;
+    font-family: sc;
+    src: url("~/assets/typeface/华文中宋.ttf");
+    font-display: swap;
 }
-@font-face {
-	font-family: PingFang-m;
-	src: url("~/assets/typeface/PingFang-m.otf");
-	font-display: swap;
-}
-@font-face {
-	font-family: BungeeLayers-Regular;
-	src: url("~/assets/typeface/BungeeLayers-Regular.ttf");
-	font-display: swap;
-}
-
-button {
-	border: 0; // 去除未选中状态边框
-	outline: none; // 去除选中状态边框
-	background-color: rgba(0, 0, 0, 0); // 透明背景
-}
-
-a {
-	color: $themeColor1;
-}
-a:hover {
-	color: $themeColor2;
-}
-
-html::-webkit-scrollbar {
-	width: 10px;
-}
-
-html::-webkit-scrollbar-track {
-	display: none;
-}
-
-html::-webkit-scrollbar-thumb {
-	background: #6C90C3;
-	border-radius: 2px;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-	background: #274272;
-	border-radius: 2px;
-}
-
-html::-webkit-scrollbar-thumb:active {
-	background: #274272;
-	border-radius: 2px;
-}
-
-@import url("~/assets/css/articleTheme.scss");

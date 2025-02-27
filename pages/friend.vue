@@ -1,79 +1,142 @@
 <template>
     <div class="friend">
-        <div class="title">交换友链</div>
-        <div class="content">
-            <ul>
-                <li>申请友链前请务必确保贵站有我站的友链, 若审批通过后移除本站链接, 本站也将移除友链.</li>
-                <li>确保您的网站不存在政治敏感问题及违法内容。没有过多的广告、无恶意软件、脚本。且转载文章须注明出处。</li>
-                <li>暂时不同意商业及非个人的网站的友链申请</li>
-                <li>本站以技术为主, 所以非技术博客可能不会考虑通过</li>
-            </ul>
-            <p>
-                如果想要交换友链, 请修改
-                <a href="https://github.com/sooooooooooooooooootheby/my_blog_nuxt/blob/main/app.config.ts" target="_blank">
-                    https://github.com/sooooooooooooooooootheby/my_blog_nuxt/blob/main/app.config.ts
+        <intro :content="$t('friend.intro')" />
+        <ul class="avatar">
+            <li v-for="(item, index) in appConfig.index.friend" :key="index">
+                <a :href="item.url" target="_blank">
+                    <img class="avatar" :src="item.button" alt="avatar" />
                 </a>
-                的 friend 部分, 发起PR并注明来意.
-            </p>
-            <p>这边建议通过pr的方式申请, 其他的方式不能保证能够立马看到申请.</p>
-            <p>格式如下:</p>
+            </li>
+        </ul>
+        <div class="add">
+            <h1>{{ $t("friend.title1") }}</h1>
             <ul>
-                <li>本博客和国内大部分博客友链样式不同, 使用的是矩形按钮(最小分辨率为176 x 62px), 当然你也可以直接在 button 中直接输入你的正方形头像链接, 默认会居中.(你可以敲个注释, 让我帮忙给你做一个矩形按钮, 只要我有空都会帮的)</li>
+                <li>
+                    <p>{{ $t("friend.list.1") }}</p>
+                </li>
+                <li>
+                    <p>{{ $t("friend.list.2") }}</p>
+                </li>
+                <li>
+                    <p>{{ $t("friend.list.3") }}</p>
+                </li>
+                <li>
+                    <p>{{ $t("friend.list.4") }}</p>
+                </li>
             </ul>
-            <pre>
-{
-    name: "你的名字",
-    url: "你的链接",
-    button: "你的按钮图片"
-}</pre
-            >
-            <p>我的信息:</p>
-            <pre>
-{
-    name: "sooooooooooooooooootheby", # or s22y
-    url: "http://blog.sooooooooooooooooootheby.top/",
-    description: "去码头整点薯条",
-    button: "https://blog.sooooooooooooooooootheby.top/friend/Sooooooooooooooooootheby.webp",
-    avatar: "https://blog.sooooooooooooooooootheby.top/logo_small.webp"
-}</pre
-            >
+            <h1>{{ $t("friend.title2") }}</h1>
+            <p>
+                {{ $t("friend.content1") }}
+            </p>
+            <p>{{ $t("friend.content2") }}</p>
+            <br />
+            <h1>{{ $t("friend.title3") }}</h1>
+            <p>
+                {{ $t("friend.content3") }}
+            </p>
+            <div class="mockup-code">
+                <pre data-prefix="1"><code class="annotation"># Application form</code></pre>
+                <pre data-prefix="2"><code></code></pre>
+                <pre data-prefix="3"><code><span class="brace">{</span></code></pre>
+                <pre
+                    data-prefix="4"
+                ><code>    <span class="name">name</span>: "<span class="value">your name</span>",</code></pre>
+                <pre
+                    data-prefix="5"
+                ><code>    <span class="name">url</span>: "<span class="value">your link</span>",</code></pre>
+                <pre
+                    data-prefix="6"
+                ><code>    <span class="name">button</span>: "<span class="value">your button image</span>"</code></pre>
+                <pre data-prefix="7"><code><span class="brace">}</span></code></pre>
+            </div>
+            <div class="mockup-code">
+                <pre data-prefix="3"><code><span class="brace">{</span></code></pre>
+                <pre
+                    data-prefix="4"
+                ><code>    <span class="name">name</span>: "<span class="value">sooooooooooooooooootheby</span>", <span class="annotation"># or s22y</span></code></pre>
+                <pre
+                    data-prefix="5"
+                ><code>    <span class="name">url</span>: "<span class="value">http://blog.sooooooooooooooooootheby.top/</span>",</code></pre>
+                <pre
+                    data-prefix="6"
+                ><code>    <span class="name">description</span>: "<span class="value">Go to the pier and get some fries</span>",</code></pre>
+                <pre
+                    data-prefix="6"
+                ><code>    <span class="name">button</span>: "<span class="value">https://blog.sooooooooooooooooootheby.top/friend/Sooooooooooooooooootheby.webp</span>",</code></pre>
+                <pre
+                    data-prefix="6"
+                ><code>    <span class="name">avatar</span>: "<span class="value">https://blog.sooooooooooooooooootheby.top/logo_small.webp</span>"</code></pre>
+                <pre data-prefix="7"><code><span class="brace">}</span></code></pre>
+            </div>
         </div>
     </div>
 </template>
 
+<script setup>
+const appConfig = useAppConfig();
+</script>
+
 <style lang="scss" scoped>
-.friend {
-    .title {
-        margin-top: 32px;
-        font-size: 2rem;
-        font-weight: bold;
+.avatar {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        width: 88px;
+        height: 31px;
+        margin-left: 0;
+        margin-right: 12px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+}
+.add {
+    margin-top: 64px;
+
+    h1 {
+        margin-top: 24px;
+        font-size: 1.8rem;
     }
     ul {
-        margin-top: 24px;
-        margin-left: 26px;
-        li {
-            margin-top: 12px;
-        }
-    }
-    p {
-        margin-top: 24px;
-        overflow-wrap: break-word;
-    }
-    pre {
-        margin-top: 24px;
-        padding: 24px;
-        background-color: #171f55;
-        border-radius: 12px;
-        overflow: scroll;
-        overflow-y: hidden;
+        margin-left: 12px;
 
-        code {
-            margin: 0;
-            background-color: transparent;
+        li {
+            margin: 12px 0;
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+            }
         }
     }
-    pre::-webkit-scrollbar {
-        height: 0px;
+    a {
+        text-decoration: underline;
+    }
+    .mockup-code {
+        margin: 24px 0;
+
+        .annotation {
+            color: #6e717f;
+        }
+        .brace {
+            color: #ff5372;
+        }
+        .name {
+            color: #80cbc4;
+        }
+        .value {
+            color: #6ad7ff;
+        }
     }
 }
 </style>

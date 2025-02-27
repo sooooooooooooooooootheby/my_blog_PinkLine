@@ -1,75 +1,58 @@
 <template>
-	<div class="appHeader">
-		<div class="content">
-			<div class="articleInfo" v-if="isArticle || isExercise">
-				<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
-					<p class="articleTitle">{{ data.title }}</p>
-					<p class="articleTime">{{ handleTime(data.data) }}</p>
-				</ContentQuery>
-			</div>
-			<nav class="menu">
-				<ul class="mainmenu">
-					<li class="item">
-						<NuxtLink to="/">
-							<Icon class="icon" name="gravity-ui:cherry" />
-							<span class="text">Home</span>
-						</NuxtLink>
-					</li>
-					<li class="item spot">·</li>
-					<li class="item">
-						<NuxtLink to="/article">
-							<Icon class="icon" name="gravity-ui:book-open" />
-							<span class="text">article</span>
-						</NuxtLink>
-					</li>
-					<li class="item spot">·</li>
-					<li class="item">
-						<NuxtLink to="/notes">
-							<Icon class="icon" name="gravity-ui:paper-plane" />
-							<span class="text">notes</span>
-						</NuxtLink>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+    <div class="appHeader">
+        <div class="guider">
+            <NuxtLink to="/">{{ $t("menu.home") }}</NuxtLink>
+            <NuxtLink to="/article" :class="{ link: $route.path === '/article' }">{{ $t("menu.article") }}</NuxtLink>
+            <NuxtLink to="/friend" :class="{ link: $route.path === '/friend' }">{{ $t("menu.friend") }}</NuxtLink>
+            <NuxtLink to="/project" :class="{ link: $route.path === '/project' }">{{ $t("menu.project") }}</NuxtLink>
+        </div>
+        <div class="tool">
+            <Icon class="icon" name="fa-solid:language" @click="cutLang" />
+        </div>
+    </div>
 </template>
 
 <script setup>
-// 判断是否处于 articles exercises 页面
-const route = useRoute();
-const isArticle = computed(() => route.path.includes("/articles/"));
-const isExercise = computed(() => route.path.includes("/exercises/"));
+const { t, setLocale } = useI18n();
 
-// 在文章页时显示文章信息
-const config = useRuntimeConfig();
-
-// 格式化时间
-const handleTime = (time) => {
-    if (time === null || time === undefined) {
-        return;
-    }
-
-    // 使用Date对象解析ISO 8601格式的时间戳
-    const date = new Date(time);
-
-    // 解析时间
-    const months = date.getMonth();
-    const day = date.getDate();
-    const year = date.getFullYear();
-    const hours = date.getHours().toString().padStart(2, "0"); // 确保两位数
-    const minutes = date.getMinutes().toString().padStart(2, "0"); // 确保两位数
-    const seconds = date.getSeconds().toString().padStart(2, "0"); // 确保两位数
-
-    // 将月份转换为缩写格式
-    const monthArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-    const month = monthArray[months];
-
-    // 返回格式化的时间字符串
-    return `${year} ${month}-${day}`;
+const cutLang = () => {
+    const lang = t("lang");
+    setLocale(lang === "zh" ? "en" : "zh");
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("~/assets/css/components/appHeader.scss");
+.appHeader {
+    max-width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .guider {
+        display: flex;
+
+        a {
+            margin-right: 24px;
+            font-family: sc;
+        }
+        .link {
+            color: #d0785b;
+        }
+    }
+    .tool {
+        .icon {
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .appHeader {
+        max-width: 100vw;
+        padding: 0 24px;
+    }
+}
 </style>

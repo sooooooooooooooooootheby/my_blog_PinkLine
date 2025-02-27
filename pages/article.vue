@@ -1,27 +1,21 @@
 <template>
     <div class="articleList">
+        <intro :content="$t('article.intro')" />
         <div class="year" v-for="year in sortedYears" :key="year">
-            <span>{{ year }}</span>
             <div class="article" v-for="item in articleGrouping[year]" :key="item._path">
-                <a :href="item._path">
-                    <div class="head">
-                        <div class="title">{{ item.title }}</div>
-                        <div class="time">
-                            {{ handleTime(item.data) }}
-                        </div>
-                    </div>
-                    <div class="description">{{ item.description }}</div>
-                </a>
+                <NuxtLink :to="item._path">
+                    <p class="title">{{ item.title }}</p>
+                </NuxtLink>
+                <p class="time">
+                    {{ handleTime(item.data) }}
+                </p>
+                <p class="description">{{ item.description }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
-useHead({
-    title: "article",
-});
-
 const articles = await queryContent("articles")
     .where({ _path: { $contains: "/articles/" } })
     .sort({ data: -1 })
@@ -63,14 +57,53 @@ const handleTime = (time) => {
     const seconds = date.getSeconds().toString().padStart(2, "0"); // 确保两位数
 
     // 将月份转换为缩写格式
-    const monthArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+    const monthArray = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
     const month = monthArray[months];
 
     // 返回格式化的时间字符串
-    return `${month}-${day}`;
+    return `${month} ${day}, ${year}`;
 };
 </script>
 
 <style lang="scss" scoped>
-@import url("~/assets/css/pages/article.scss");
+.articleList {
+    .year {
+        margin-bottom: 64px;
+    }
+    .article {
+        margin-bottom: 24px;
+
+        .title {
+            font-size: 1.2rem;
+            position: relative;
+            transition: 0.2s;
+        }
+        .title:hover {
+            color: #d0785b;
+        }
+        .title:hover::after {
+            content: "Read more";
+            color: #d0785b;
+            position: absolute;
+            right: 0;
+        }
+        .time,
+        .description {
+            opacity: 0.6;
+        }
+    }
+}
 </style>

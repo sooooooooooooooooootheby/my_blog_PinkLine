@@ -1,20 +1,5 @@
 export default defineAppConfig({
   index: {
-    target: [
-      "通过专升本考试 or 找到工作",
-      "开发一个<del>原生的</del> android 应用程序并持续维护到2026年"
-    ],
-
-    skill: [
-      "JavaScript",
-      "Vue.js",
-      "Node.js",
-      "C",
-      "Kotlin",
-      "MySql",
-      "Nuxt3.js"
-    ],
-
     project: [{
       title: "网易云无损解析",
       description: "如果你苦于没有黑胶会员或者想要转战本地播放器, 不妨试试这个网站, 它可以下载无损音乐",

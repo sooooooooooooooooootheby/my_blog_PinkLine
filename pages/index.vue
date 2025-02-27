@@ -1,117 +1,124 @@
 <template>
-    <div class="home">
-        <div class="one">
-            <div class="greet">
-                <p class="greet_title1">Hi.👋</p>
-                <p class="greet_title2">I'm</p>
-                <p class="greet_title3"><Icon class="icon" name="icon-park-solid:connect-address-two" />现居 中国南宁.</p>
-                <p class="greet_title3"><Icon class="icon" name="icon-park-solid:blossom" />梦想是躺平什么都不用做.</p>
-            </div>
-            <!-- <img :src="randomImage()" alt="headerBar" class="headerBar" /> -->
-            <div class="introduce">
-                <p class="introduce_1">在读, 专业是计算机网络技术.</p>
-                <p class="introduce_2">
-                    目前在备战专升本考试, 业余时间会做一些没用的小玩意, 可以去我的<a
-                        href="https://github.com/sooooooooooooooooootheby?tab=repositories"
-                        >Github</a
-                    >看看. 如果能够帮到你我会很开心.
+    <div class="index prose">
+        <h1>{{ greeting.title }}</h1>
+        <intro :content="greeting.content" />
+        <ul>
+            <li>
+                <p>
+                    <!-- I am <b>Sooooooooooooooooootheby</b> —— a name as whimsically elongated as the winding lanes of the English
+                    countryside. Should you find its grandeur a touch excessive, you may, with a dash of casual charm, simply
+                    call me <b>S22y</b>. I hail from the picturesque region of Guangxi in China, where the hills roll like the
+                    verses of a romantic poem. At present, I am immersed in my studies at a Technical school, with my gaze fixed
+                    upon the 2025 The Examination for Promotion from Junior College to Bachelor's Degree in Regular Higher
+                    Education. Though, I must confess, the path ahead seems as uncertain as the British weather. -->
+                    {{ $t("index.ul.li1") }}
                 </p>
-                <p class="introduce_3">买了新域名辣! 心心念念的.moe, 用压岁钱买的(•‾⌣‾•), 新域名 s22y.moe, 旧的域名等8月份过期就不续了.</p>
-            </div>
-            <div class="content target">
-                <span class="title"> 2025 年目标 ( 0 / 2 ) </span>
-                <ul>
-                    <li v-for="(item, index) in appConfig.index.target" :key="index">
-                        <p v-html="item"></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="content skill">
-                <span class="title"> 技术 </span>
-                <ul>
-                    <li v-for="(item, index) in appConfig.index.skill" :key="index">{{ item }}</li>
-                </ul>
-            </div>
-            <div class="content project">
-                <span class="title"> 项目 </span>
-                <ul>
-                    <li v-for="(item, index) in appConfig.index.project" :key="index">
-                        <a :href="item.url" target="_blank"> {{ item.title }} </a>
-                        <p>{{ item.description }}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="content api">
-                <span class="title"> Api </span>
-                <ul>
-                    <li v-for="(item, index) in appConfig.index.api" :key="index">
-                        <a :href="item.url" target="_blank"> {{ item.title }} </a>
-                        <p>{{ item.description }}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="content friend" id="friend">
-                <span class="title"><NuxtLink to="/friend"> 朋友们 </NuxtLink></span>
-                <ul>
-                    <li v-for="(item, index) in appConfig.index.friend" :key="index">
-                        <a :href="item.url" target="_blank">
-                            <img class="avatar" :src="item.button" alt="avatar" />
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="content contact">
-                <span class="title"> 联系 </span>
-                <ul>
-                    <li>
-                        <p>
-                            Github:
-                            <a href="https://github.com/sooooooooooooooooootheby" target="_blank"
-                                >https://github.com/sooooooooooooooooootheby</a
-                            >
-                        </p>
-                    </li>
-                    <li>
-                        <p>Email: sooooooooooooooooootheby@e.s22y.moe</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="content" v-show="checkDomain()">
-                <img src="https://moco.yukata.dev/get/@sooooooooooooooooootheby" alt="sooooooooooooooooootheby" />
-            </div>
-        </div>
+            </li>
+            <li>
+                <p>
+                    <!-- My heart beats with a fervent passion for the art of web front-end development, where I wield
+                    Vue.js and Nuxt.js with a certain finesse. My repertoire extends to the realms of
+                    the backend as well, where I dabble in the likes of MySQL and conjure servers with
+                    Node.js, as one might craft a potion in a wizard's lair. -->
+                    {{ $t("index.ul.li2") }}
+                </p>
+            </li>
+            <li>
+                <p>
+                    <!-- In the quietude of my leisure, I indulge in the creation of various contraptions—some of utility, others of
+                    whimsy. I extend an invitation to peruse
+                    <a href="https://github.com/sooooooooooooooooootheby">my Github</a>
+                    repository, where these creations reside. Should they prove to be of service to you, it would bring me no
+                    small measure of joy. -->
+                    {{ $t("index.ul.li3") }}
+                </p>
+            </li>
+            <li>
+                <p>
+                    {{ $t("index.ul.li4") }}
+                    <Icon class="icon" name="fa-brands:js-square" />
+                    <Icon class="icon" name="mingcute:vue-fill" />
+                    <Icon class="icon" name="tabler:brand-nodejs" />
+                    <Icon class="icon" name="devicon-plain:c" />
+                    <Icon class="icon" name="tabler:brand-kotlin" />
+                    <Icon class="icon" name="whh:mysqltwo" />
+                    <Icon class="icon" name="simple-icons:nuxt" />
+                </p>
+            </li>
+            <small>{{ $t("index.ul.small") }}</small>
+        </ul>
+        <NuxtLink class="getInTouch btn" to="touch">{{ $t("index.ul.touch") }}</NuxtLink>
     </div>
 </template>
 
 <script setup>
-const appConfig = useAppConfig();
-useHead({
-    title: "welcome to my blog",
+const { t } = useI18n();
+
+const greeting = ref({
+    title: "",
+    content: "",
 });
 
-const randomImage = () => {
-    // const num = Math.floor(Math.random() * (8 - 1) + 1);
-    // return `/carousel/${num}.webp`;
-    return `/carousel/Canvas-Ruom.webp`;
-};
+const getGreeting = () => {
+    const now = new Date();
+    const hours = now.getHours();
 
-const checkDomain = () => {
-    if (process.client) {
-        const domain = window.location.hostname;
-        const isLocalhost = domain === "localhost";
-        const is192168 = domain.startsWith("192.168.");
-
-        if (isLocalhost || is192168) {
-            return false;
-        }
-        return true;
+    if (hours < 12) {
+        greeting.value.title = t("index.greeting1.title");
+        greeting.value.content = t("index.greeting1.content");
+    } else if (hours < 18) {
+        greeting.value.title = t("index.greeting2.title");
+        greeting.value.content = t("index.greeting2.content");
+    } else {
+        greeting.value.title = t("index.greeting3.title");
+        greeting.value.content = t("index.greeting3.content");
     }
-
-    // 如果在服务端运行，可以根据需要返回默认值
-    return false;
 };
+
+onMounted(() => {
+    getGreeting();
+});
 </script>
 
 <style lang="scss" scoped>
-@import url("~/assets/css/pages/index.scss");
+.index {
+    width: 100%;
+    max-width: 100%;
+
+    img {
+        width: 48px;
+        height: auto;
+    }
+    h1,
+    .intro {
+        letter-spacing: 0.3px;
+    }
+    p,
+    li {
+        letter-spacing: 0.1px;
+        word-spacing: 1px;
+        margin: 8px 0;
+    }
+    small {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    code {
+        font-size: 0.8rem;
+    }
+    .icon {
+        margin-right: 4px;
+    }
+    .getInTouch {
+        height: 2.6rem;
+        min-height: 2rem;
+        margin-left: 24px;
+        padding: 0 24px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 999px;
+        background-color: transparent;
+        font-family: sc;
+    }
+}
 </style>

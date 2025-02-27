@@ -1,67 +1,59 @@
 <template>
-	<header>
-		<appHeader />
-	</header>
-	<main>
-		<NuxtPage></NuxtPage>
-	</main>
-	<footer>
-		<appFooter />
-		<SpeedInsights/>
-		<Analytics/>
-	</footer>
+    <div>
+        <header>
+            <appHeader />
+        </header>
+        <main>
+            <div class="content">
+                <NuxtPage />
+            </div>
+            <div class="bg"></div>
+        </main>
+        <footer>
+            <appFooter />
+        </footer>
+    </div>
 </template>
 
-<script setup>
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-import { Analytics } from '@vercel/analytics/nuxt'
-
-useHead({
-	title: "River of star Dreams",
-	meta: [{ name: "description", content: "s22y's webSite" }],
-	link: [
-		{ rel: "shortcut icon", href: "/logo_small.webp" },
-		{ rel: "apple-touch-icon", href: "/logo_small.webp" },
-	],
-	titleTemplate(titleChunk) {
-		return titleChunk ? `${titleChunk} - s22y's webSite` : "s22y's webSite";
-	},
-});
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
-header {
-	width: 700px;
-	height: auto;
-	margin: 0 auto;
-	padding-top: 82px;
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.4s;
 }
-main {
-	width: 700px;
-	min-height: 80vh;
-	margin: 0 auto;
-	position: relative;
-	z-index: 1;
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    filter: blur(1px);
 }
-footer {
-	width: 700px;
-	margin: 0 auto;
-	padding: 20px 0;
+.content {
+    width: 800px;
+    margin: 0 auto;
+    min-height: calc(100vh - 100px);
+    padding-top: 42px;
+    padding-bottom: 128px;
+}
+.bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url("/bg.webp");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-@media (max-width: 900px) {
-	header {
-		width: calc(100vw - 40px);
-		height: 48px;
-		padding: 64px 2.5vw 0;
-	}
-	main {
-		width: calc(100vw - 40px);
-		padding: 0 20px;
-	}
-	footer {
-		width: calc(100vw - 40px);
-		padding: 40px 20px;
-	}
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    .bg {
+        background-position: center center;
+    }
 }
 </style>
