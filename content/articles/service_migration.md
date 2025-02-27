@@ -1,7 +1,7 @@
 ---
 title: "[随记]将旧服务器上的服务迁移到新服务器"
 description: ""
-data: 2025-01-22T20:55:34.000Z
+data: 2025-02-22T20:55:34.000Z
 dataed: ""
 categories: 运维
 file: service_migration
