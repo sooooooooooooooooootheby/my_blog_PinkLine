@@ -21,10 +21,10 @@ export default defineNuxtConfig({
         head: {
             title: "S22y",
             meta: [
-                { name: "description", content: "这是s22y的博客!" },
+                { name: "description", content: "去码头整点薯条!" },
                 { name: "keywords", content: "s22y, github, blog" },
                 { property: "og:title", content: "s22y" },
-                { property: "og:description", content: "这是s22y的博客!" },
+                { property: "og:description", content: "去码头整点薯条!" },
                 { property: "og:image", content: "/og.webp" },
             ],
             link: [{ rel: "icon", type: "image/x-icon", href: "/logo_small.webp" }],
