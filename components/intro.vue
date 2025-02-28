@@ -3,7 +3,9 @@
         <p>
             {{ props.content }}
         </p>
-        <div class="divider"><img src="/signature.png" alt="signature" /></div>
+        <div class="divider">
+            <span class="signature">S22y</span>
+        </div>
     </div>
 </template>
 
@@ -16,14 +18,14 @@ const props = defineProps(["content"]);
 .intro {
     margin-bottom: 32px;
 
-    img {
-        width: 48px;
-        height: auto;
-        opacity: 0.8;
-    }
     p {
         letter-spacing: 0.3px;
         font-family: CrimsonText-5, sc;
+    }
+    .signature {
+        font-family: Champignon;
+        font-size: 2rem;
+        color: #d0785b;
     }
 }
 </style>
