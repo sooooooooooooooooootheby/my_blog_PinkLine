@@ -3,8 +3,8 @@
         <div class="guider">
             <NuxtLink to="/">{{ $t("menu.home") }}</NuxtLink>
             <NuxtLink to="/article" :class="{ link: $route.path === '/article' }">{{ $t("menu.article") }}</NuxtLink>
-            <NuxtLink to="/friend" :class="{ link: $route.path === '/friend' }">{{ $t("menu.friend") }}</NuxtLink>
             <NuxtLink to="/project" :class="{ link: $route.path === '/project' }">{{ $t("menu.project") }}</NuxtLink>
+            <NuxtLink to="/friend" :class="{ link: $route.path === '/friend' }">{{ $t("menu.friend") }}</NuxtLink>
         </div>
         <div class="tool">
             <Icon class="icon" name="fa-solid:language" @click="cutLang" />
