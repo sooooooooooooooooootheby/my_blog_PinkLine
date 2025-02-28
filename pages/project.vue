@@ -1,7 +1,8 @@
 <template>
     <div class="project">
+        <intro :content="$t('project.intro')" />
         <div class="content project">
-            <h1 class="title">项目 🍕</h1>
+            <h1 class="title">Project 🍕</h1>
             <ul>
                 <li v-for="(item, index) in appConfig.index.project" :key="index">
                     <a :href="item.url" target="_blank"> {{ item.title }} </a>
