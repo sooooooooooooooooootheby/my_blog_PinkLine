@@ -74,6 +74,14 @@ onMounted(() => {
     .appFooter {
         max-width: 100vw;
         padding: 0 24px;
+
+        .bar {
+            display: flex;
+            flex-direction: column;
+        }
+        .signature {
+            font-size: 1.4rem;
+        }
     }
 }
 </style>
