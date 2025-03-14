@@ -4,8 +4,8 @@ import RSS from "rss";
 export default defineEventHandler(async (event) => {
 	const feed = new RSS({
 		title: "River of star Dreams",
-		site_url: "https://blog.sooooooooooooooooootheby.top/",
-		feed_url: `https://blog.sooooooooooooooooootheby.top/rss.xml`,
+		site_url: "https://blog.s22y.moe/",
+		feed_url: `https://blog.s22y.moe/rss.xml`,
 	});
 	const docs = await serverQueryContent(event).sort({ date: -1 }).find();
 	const blogPosts = docs.filter((doc) => doc?._path?.includes("/articles"));
@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
 	for (const doc of blogPosts) {
 		feed.item({
 			title: doc.title ?? "-",
-			url: `https://blog.sooooooooooooooooootheby.top/${doc._path}`,
+			url: `https://blog.s22y.moe/${doc._path}`,
 			date: doc.data,
 			description: doc.description,
 		});
