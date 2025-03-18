@@ -1,58 +1,100 @@
 <template>
-    <div class="appHeader">
-        <div class="guider">
-            <NuxtLink to="/">{{ $t("menu.home") }}</NuxtLink>
-            <NuxtLink to="/article" :class="{ link: $route.path === '/article' }">{{ $t("menu.article") }}</NuxtLink>
-            <NuxtLink to="/project" :class="{ link: $route.path === '/project' }">{{ $t("menu.project") }}</NuxtLink>
-            <NuxtLink to="/friend" :class="{ link: $route.path === '/friend' }">{{ $t("menu.friend") }}</NuxtLink>
+    <div class="header">
+        <div class="info">
+            <img src="/logo_MG.gif" alt="logo_MG" class="img" />
         </div>
-        <div class="tool">
-            <Icon class="icon" name="fa-solid:language" @click="cutLang" />
-        </div>
+        <ul class="navigate pc">
+            <li class="item" v-if="isPath('/')"><NuxtLink to="/">about</NuxtLink></li>
+            <li class="item" v-if="isPath('/article')"><NuxtLink to="/article">article</NuxtLink></li>
+            <li class="item" v-if="isPath('/note')"><NuxtLink to="/note">note</NuxtLink></li>
+            <li class="item" v-if="isPath('/friend')"><NuxtLink to="/friend">friend</NuxtLink></li>
+            <li class="item" v-if="isPath('/search')"><NuxtLink to="/search">search</NuxtLink></li>
+            <li class="item"><NuxtLink to="/rss.xml" target="_blank">rss</NuxtLink></li>
+        </ul>
+        <ul class="navigate mobi">
+            <li class="item" v-if="isPath('/')">
+                <NuxtLink to="/"><Icon name="akar-icons:coffee" /></NuxtLink>
+            </li>
+            <li class="item" v-if="isPath('/article')">
+                <NuxtLink to="/article"><Icon name="akar-icons:folder" /></NuxtLink>
+            </li>
+            <li class="item" v-if="isPath('/note')">
+                <NuxtLink to="/note"><Icon name="akar-icons:comment" /></NuxtLink>
+            </li>
+            <li class="item" v-if="isPath('/friend')">
+                <NuxtLink to="/friend"><Icon name="akar-icons:paper-airplane" /></NuxtLink>
+            </li>
+            <li class="item" v-if="isPath('/search')">
+                <NuxtLink to="/search"><Icon name="akar-icons:search" /></NuxtLink>
+            </li>
+            <li class="item">
+                <NuxtLink to="/rss.xml" target="_blank"><Icon name="akar-icons:rss" /></NuxtLink>
+            </li>
+        </ul>
     </div>
 </template>
 
-<script setup>
-const { t, setLocale } = useI18n();
-
-const cutLang = () => {
-    const lang = t("lang");
-    setLocale(lang === "zh" ? "en" : "zh");
+<script lang="ts" setup>
+const route = useRoute();
+const isPath = (path: string): boolean => {
+    if (path === route.path) {
+        return false;
+    } else {
+        return true;
+    }
 };
 </script>
 
 <style lang="scss" scoped>
-.appHeader {
-    max-width: 800px;
-    height: 100px;
-    margin: 0 auto;
+.header {
+    width: 100%;
+    height: 64px;
+    padding-top: 32px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
 
-    .guider {
+    .info {
         display: flex;
+        align-items: center;
 
-        a {
-            margin-right: 24px;
-            font-family: sc;
-        }
-        .link {
-            color: #d0785b;
+        .img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
         }
     }
-    .tool {
-        .icon {
-            font-size: 18px;
-            cursor: pointer;
+    .navigate {
+        display: flex;
+
+        .item {
+            list-style: none;
+            margin-left: 8px;
+
+            a {
+                color: var(--font-color);
+                opacity: 0.8;
+            }
+        }
+    }
+    .mobi {
+        display: none;
+        font-size: 1.1rem;
+
+        .item {
+            margin-left: 12px;
         }
     }
 }
 
-@media (max-width: 768px) {
-    .appHeader {
-        max-width: 100vw;
-        padding: 0 24px;
+@media (max-width: 600px) {
+    .header {
+        .pc {
+            display: none;
+        }
+        .mobi {
+            display: flex;
+        }
     }
 }
 </style>
