@@ -4,11 +4,11 @@
             <h1>{{ article.title }}</h1>
             <p>{{ handleTime(article.data) }}</p>
             <ContentRenderer :value="article" />
-            <div style="margin-top: 64px">
-                <ClientOnly>
-                    <waline />
-                </ClientOnly>
-            </div>
+        </div>
+        <div style="margin-top: 64px">
+            <ClientOnly>
+                <waline />
+            </ClientOnly>
         </div>
     </template>
     <template v-else>

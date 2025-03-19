@@ -16,3 +16,9 @@ onMounted(() => {
     });
 });
 </script>
+
+<style lang="scss">
+.wl-emoji {
+    height: 2.4rem !important;
+}
+</style>
