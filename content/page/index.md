@@ -29,8 +29,8 @@
 
 ## 和我接触 🔗
 
--   Github: https://github.com/sooooooooooooooooootheby
-
 -   email: sooooooooooooooooootheby@e.s22y.moe
 
--   discord: sooooooooooooooooootheby
+-   [Github](https://github.com/sooooooooooooooooootheby)
+
+-   [discord](https://discord.gg/UYEgBQNj)
