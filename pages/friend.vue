@@ -1,14 +1,19 @@
 <template>
-    <div class="friend mark">
-        <h1>来自互联网的朋友</h1>
-        <ul class="list">
-            <li class="item" v-for="item in appConfig.friend" :key="item.name">
-                <a :href="item.url" target="_block">
-                    <img :src="item.button" alt="button" />
-                </a>
-            </li>
-        </ul>
-        <ContentRenderer :value="friend" />
+    <div class="friend">
+        <div class="mark">
+            <h1>来自互联网的朋友</h1>
+            <ul class="list">
+                <li class="item" v-for="item in appConfig.friend" :key="item.name">
+                    <a :href="item.url" target="_block">
+                        <img :src="item.button" alt="button" />
+                    </a>
+                </li>
+            </ul>
+            <ContentRenderer :value="friend" />
+        </div>
+        <clientOnly>
+            <waline />
+        </clientOnly>
     </div>
 </template>
 

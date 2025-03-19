@@ -12,6 +12,8 @@
 
 如果你希望交换链接, 请修改[配置文件](https://github.com/sooooooooooooooooootheby/my_blog_nuxt/blob/main/app.config.ts)的友链部分, 提交一个 PR, 并请说明你的目的.
 
+如果你觉得pr麻烦, 也可以直接在评论区留言.
+
 我推荐使用 PR, 当然你也可以使用邮箱, 只是 PR 比较省事.
 
 ## 关于格式
