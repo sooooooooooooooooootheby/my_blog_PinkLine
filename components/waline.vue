@@ -11,9 +11,8 @@ onMounted(() => {
         serverURL: "https://comment.s22y.moe/",
         reaction: false,
         search: false,
-        emoji: [
-            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999",
-        ],
+        dark: "html[class='dark-mode']",
+        emoji: ["https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999"],
     });
 });
 </script>
