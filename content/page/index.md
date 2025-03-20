@@ -1,4 +1,4 @@
-<a href="/">
+W<a href="/">
     <img src="/Canvas-Ruom.webp" alt="cover" >
 </a>
 
@@ -6,11 +6,14 @@
 
 ## 欢迎光临我的 blog 🎉
 
-我是 sooooooooooooooooootheby(s22y), 一个前端 `developer`, 我擅长使用`vue.js` & `Nuxt.js`.
+我是 sooooooooooooooooootheby(s22y), 一个前端 `developer`, 擅长使用`vue.js` & `Nuxt.js`.
 
 ## 正在研究的项目 🎁
 
 -   [Wonderland tea party](https://github.com/sooooooooooooooooootheby/Wonderland-tea-party) 这是一个基于 Nuxt.js 的 ai 聊天应用，通过各大服务商的 api 调用大型语言模型进行聊天.
+
+-   [PinkLine](https://github.com/sooooooooooooooooootheby/PinkLine)
+基于nuxt3 + nuxt/content3的个人博客模板
 
 ## 技术栈 🛟
 
