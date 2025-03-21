@@ -1,4 +1,4 @@
-W<a href="/">
+<a href="/">
     <img src="/Canvas-Ruom.webp" alt="cover" >
 </a>
 
