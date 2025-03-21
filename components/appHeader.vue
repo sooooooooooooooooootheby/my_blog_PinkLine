@@ -8,7 +8,7 @@
             <li class="item" v-if="isPath('/article')"><NuxtLink to="/article">article</NuxtLink></li>
             <li class="item" v-if="isPath('/note')"><NuxtLink to="/note">note</NuxtLink></li>
             <li class="item" v-if="isPath('/friend')"><NuxtLink to="/friend">friend</NuxtLink></li>
-            <li class="item"><NuxtLink to="/rss.xml" target="_blank">rss</NuxtLink></li>
+            <li class="item"><a href="/rss.xml" target="_blank">rss</a></li>
         </ul>
         <ul class="navigate mobi">
             <li class="item" v-if="isPath('/')">
@@ -23,11 +23,8 @@
             <li class="item" v-if="isPath('/friend')">
                 <NuxtLink to="/friend"><Icon name="akar-icons:paper-airplane" /></NuxtLink>
             </li>
-            <li class="item" v-if="isPath('/search')">
-                <NuxtLink to="/search"><Icon name="akar-icons:search" /></NuxtLink>
-            </li>
             <li class="item">
-                <NuxtLink to="/rss.xml" target="_blank"><Icon name="akar-icons:rss" /></NuxtLink>
+                <a href="/rss.xml" target="_blank"><Icon name="akar-icons:rss" /></a>
             </li>
         </ul>
     </div>
