@@ -8,7 +8,6 @@
             <li class="item" v-if="isPath('/article')"><NuxtLink to="/article">article</NuxtLink></li>
             <li class="item" v-if="isPath('/note')"><NuxtLink to="/note">note</NuxtLink></li>
             <li class="item" v-if="isPath('/friend')"><NuxtLink to="/friend">friend</NuxtLink></li>
-            <li class="item" v-if="isPath('/search')"><NuxtLink to="/search">search</NuxtLink></li>
             <li class="item"><NuxtLink to="/rss.xml" target="_blank">rss</NuxtLink></li>
         </ul>
         <ul class="navigate mobi">
