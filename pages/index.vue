@@ -1,5 +1,5 @@
 <template>
-    <div class="index mark">
+    <div class="index mark custom">
         <ContentRenderer :value="about" />
     </div>
 </template>

@@ -77,7 +77,17 @@
     }
     a {
         color: #d9908e;
+        line-height: 21px;
         text-decoration: none;
+        display: flex;
+
+        img {
+            width: 21px;
+            height: 21px;
+            margin: 0;
+            margin-left: 6px;
+            border-radius: 0;
+        }
     }
     a:hover {
         color: #d9908e;
