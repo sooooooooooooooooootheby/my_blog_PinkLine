@@ -44,6 +44,8 @@ const { data: friend } = await useAsyncData(route.path, () => {
             margin-right: 12px;
             list-style: none;
             overflow: hidden;
+            display: flex;
+            align-items: center;
 
             img {
                 width: 100%;
