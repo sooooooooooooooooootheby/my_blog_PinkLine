@@ -42,6 +42,8 @@
     <img class="icon" src="/icon/file_type_vue_icon_130078.svg" width="40" height="40"/>
     <img class="icon" src="/icon/file_type_sass_icon_130182.svg" width="40" height="40"/>
     <img class="icon" src="/icon/nuxt.svg" width="40" height="40"/>
+    <img class="icon" src="/icon/ts.svg" width="32" height="32"/>
+    <img class="icon" src="/icon/tailwindcss.svg" width="40" height="40"/>
 </div>
 
 ## 和我接触 <img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999/EzraSquish.png"><img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999/SpathSquish.png">
