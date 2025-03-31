@@ -1,7 +1,7 @@
 ---
 title: mysql用户认证问题
 description: null
-data: 2024-9-24T12:22:53.000Z
+data: 2024-09-24T12:22:53.000Z
 dataed: null
 categories: 后端
 file: userAuthenticationError

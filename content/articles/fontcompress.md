@@ -1,7 +1,7 @@
 ---
 title: 字体压缩
 description: 一般中文字体都挺大的, 大概十几二十mb. 使用 fonttools 压缩字体, 能压缩 90% 上下, 节省流量, 也能加快页面加载.
-data: 2024-3-11T12:22:54.000Z
+data: 2024-03-11T12:22:54.000Z
 dataed: null
 categories: 工具
 file: fontcompress
