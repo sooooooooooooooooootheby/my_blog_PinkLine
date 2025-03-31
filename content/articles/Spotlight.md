@@ -1,7 +1,7 @@
 ---
 title: 写一个右键聚光灯特效
 description: 忧郁的弟弟也是很老的galgame网站了, 以前好奇这个右键的效果是怎么做出来的, 上大学学了网页制作之后再看一下就还是挺容易做的.
-data: 2024-03-12T8:22:44.000Z
+data: 2024-03-12T08:22:44.000Z
 dataed: null
 categories: 前端
 file: Spotlight
