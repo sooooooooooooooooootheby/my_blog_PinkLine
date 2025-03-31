@@ -38,7 +38,7 @@ sudo systemctl status nginx
 
 看见绿色的 active (running)就是跑起来了, 庆祝一下!
 
-![run nginx](https://image.s22y.moe/https://image.s22y.moe/image/service_migration/1.webp)
+![run nginx](https://image.s22y.moe/image/service_migration/1.webp)
 
 按下 ctrl + c 退出去.
 
@@ -46,11 +46,11 @@ sudo systemctl status nginx
 
 在地址栏输入 ip 地址.
 
-![browser](/https://image.s22y.moe/image/service_migration/2.webp)
+![browser](https://image.s22y.moe/image/service_migration/2.webp)
 
 因为我的域名是在 dynadot 买的, 这家服务商会提供证书注册服务, 以及自动续签, 所以我们只需要下载证书, 然后配置一下 nginx.
 
-![dynadot](/https://image.s22y.moe/image/service_migration/3.webp)
+![dynadot](https://image.s22y.moe/image/service_migration/3.webp)
 
 使用 WinSCP 把下载下来的证书(.cert)和密钥(.key)文件上传到服务器.
 
