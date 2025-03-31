@@ -146,7 +146,7 @@ categories: [category1, category2]
 
 当然, 如果你要渲染这些键值就需要修改列表的代码.
 
-![自定义键值](/image/nuxt_content/3.webp)
+![自定义键值](https://image.s22y.moe/image/nuxt_content/3.webp)
 
 ```vue
 <ContentList path="/articles" v-slot="{ list }">
@@ -168,7 +168,7 @@ categories: [category1, category2]
 
 页面显示 `You should use slots with <ContentRenderer>`, 打开控制台会看到 502 bad gateway 的报错.
 
-![报错](/image/nuxt_content/2.webp)
+![报错](https://image.s22y.moe/image/nuxt_content/2.webp)
 
 这是一个服务端的问题, 所以即使你在开发环境绞尽脑汁都没法复现.
 
@@ -210,7 +210,7 @@ server {
 
 但是当你修改好配置后你可能会发现, 加载时间太长了, 很不合理.
 
-![加载时间过长](/image/nuxt_content/1.webp)
+![加载时间过长](https://image.s22y.moe/image/nuxt_content/1.webp)
 
 上面的是通过 ip 直接访问的, 下面是通过域名访问的.
 

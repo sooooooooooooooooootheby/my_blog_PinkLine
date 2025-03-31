@@ -50,7 +50,7 @@ gsao.to(".box", { x: 200 });
 
 这样 box 就会向右移动 200px, 让我们分析一下这个简单移动的语法。
 
-![1](/image/GSAP/1.webp)
+![1](https://image.s22y.moe/image/GSAP/1.webp)
 
 一个方法(method)、一个目标(target)和一个变量(variables)。
 
@@ -180,7 +180,7 @@ gsap.to(".box", {
 
 [官方的曲线实验场](https://gsap.com/resources/getting-started/Easing)
 
-![2](/image/GSAP/2.webp)
+![2](https://image.s22y.moe/image/GSAP/2.webp)
 
 ## Staggers, 让你的元素有序触发
 

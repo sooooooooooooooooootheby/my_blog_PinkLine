@@ -37,11 +37,11 @@ windows 自带的 PowerShell版本比较老，我们需要更新到 7 ，否则�
 
 安装完成后打开 Windows Terminal 就能看到我们安装的 PowerShell了。
 
-![PowerShell7](/image/WindowsTerminal_oh-my-posh/PowerShell7.webp)
+![PowerShell7](https://image.s22y.moe/image/WindowsTerminal_oh-my-posh/PowerShell7.webp)
 
 这个时候打开 Windows Terminal 还是会默认打开旧的 PowerShell，在设置调一下就好了。
 
-![默认启动](/image/WindowsTerminal_oh-my-posh/defaultStart.webp)
+![默认启动](https://image.s22y.moe/image/WindowsTerminal_oh-my-posh/defaultStart.webp)
 
 ## 安装 Oh My Posh
 
@@ -87,7 +87,7 @@ oh-my-posh font install ComicShannsMono
 
 安装完成后在 Windows Terminal 的设置页面将字体修改为你安装的字体后保存即可。
 
-![使用字体](/image/WindowsTerminal_oh-my-posh/useFont.webp)
+![使用字体](https://image.s22y.moe/image/WindowsTerminal_oh-my-posh/useFont.webp)
 
 ### 配置主题
 
@@ -97,7 +97,7 @@ oh-my-posh font install ComicShannsMono
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\jandedobbeleer.omp.json" | Invoke-Expression
 ```
 
-![初始化](/image/WindowsTerminal_oh-my-posh/initialize.webp)
+![初始化](https://image.s22y.moe/image/WindowsTerminal_oh-my-posh/initialize.webp)
 
 执行`Get-PoshThemes`可以获取到 oh my posh 官方收录的主题，除了官方收录的你也可以去网上下载别人制作的主题。
 
@@ -172,7 +172,7 @@ Set-PSReadLineOption -EditMode Windows
 
 清除之后重新执行`. $PROFILE`，虽然还是会报错，但是主题应用上了，而且新建终端也没报错能够正常加载配置文件，就当无事发生了。
 
-![完成主题安装](/image/WindowsTerminal_oh-my-posh/accomplish.webp)
+![完成主题安装](https://image.s22y.moe/image/WindowsTerminal_oh-my-posh/accomplish.webp)
 
 在和GPT的对话中，GPT告诉使用 PowerShell 7 和 oh my posh 兼容性最好，而且在新建的终端看见它叫我更新 PowerShell，我就尝试更新了一下 PowerShell。
 

@@ -7,7 +7,7 @@ categories: ai
 file: free_use_GPT_4o
 ---
 
-![cover](/image/free_use_GPT_4o/cover.webp)
+![cover](https://image.s22y.moe/image/free_use_GPT_4o/cover.webp)
 
 这里白嫖的是Github的GPT, 并不是OpenAI的。
 
@@ -15,11 +15,11 @@ file: free_use_GPT_4o
 
 打开[Github](https://github.com/marketplace/models/azure-openai/gpt-4o), 点击右上角的`Get API key`, 打开窗口后点击`Get developer key`获取你的Github key.
 
-![1.webp](/image/free_use_GPT_4o/1.webp)
+![1.webp](https://image.s22y.moe/image/free_use_GPT_4o/1.webp)
 
 跳转到新的页面后点击`Generate new token`, 这里我们选择classic(说实话我也不知道这两个有什么区别, 就选择一般用途的).
 
-![2.webp](/image/free_use_GPT_4o/2.webp)
+![2.webp](https://image.s22y.moe/image/free_use_GPT_4o/2.webp)
 
 点击后会跳转到一个页面, 让你给`key`命名, 以及设置有效期, 有效期我直接设置无限, 我懒得之后再更新, 下面的权限一个都不需要添加.
 
@@ -75,7 +75,7 @@ main().catch((err) => {
 
 在终端执行`node sample.js`就能看到ai的回答了.
 
-![3.webp](/image/free_use_GPT_4o/3.webp)
+![3.webp](https://image.s22y.moe/image/free_use_GPT_4o/3.webp)
 
 # 优化代码
 
@@ -150,4 +150,4 @@ main().catch((err) => {
 node sample.js 下午好
 ```
 
-![4.webp](/image/free_use_GPT_4o/4.webp)
+![4.webp](https://image.s22y.moe/image/free_use_GPT_4o/4.webp)

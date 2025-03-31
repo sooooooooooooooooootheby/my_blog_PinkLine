@@ -43,7 +43,7 @@ fonttools subset "$input_file" --text-file="$text_file" --output-file="$output_f
 fonttools subset "./SourceHanSans-Bold.otf" --text-sile="./3500.txt" --output-file="./SourceHanSans-Bold-compress.otf"
 ```
 
-![1](/image/fontcompress/1.webp)
+![1](https://image.s22y.moe/image/fontcompress/1.webp)
 
 命令解释：
 
@@ -72,7 +72,7 @@ fonttools ttLib.woff2 compress "SourceHanSans-Bold-compress.otf" -o "SourceHanSa
 
 这里可能会出现报错，原因是缺少了 `brotli`库。
 
-![2](/image/fontcompress/2.webp)
+![2](https://image.s22y.moe/image/fontcompress/2.webp)
 
 ```shell
 // 安装brotli库
@@ -82,19 +82,19 @@ pip install brotli
 
 安装完成后再次执行即可。
 
-![3](/image/fontcompress/3.webp)
+![3](https://image.s22y.moe/image/fontcompress/3.webp)
 
 # 总结
 
 本文以思源黑体（SourceHanSans-Bold.otf）举例，成功地从17.5MB压缩到了781KB，压缩了95.53%，既减轻了服务器的压力，也能加快客户端的加载。
 
-![4](/image/fontcompress/4.webp)
+![4](https://image.s22y.moe/image/fontcompress/4.webp)
 
 # 可能出现的问题
 
 ## 安装完fonttools后显示找不到
 
-![5](/image/fontcompress/5.webp)
+![5](https://image.s22y.moe/image/fontcompress/5.webp)
 
 原因： 这是因为环境变量中没有python脚本的路径，即使再次卸载安装命令行也会显示找不到路径。
 
@@ -103,4 +103,4 @@ pip install brotli
 
 (python脚本的路径输入`pip install fonttools`再次安装就会显示出来。)
 
-![6](/image/fontcompress/6.webp)
+![6](https://image.s22y.moe/image/fontcompress/6.webp)

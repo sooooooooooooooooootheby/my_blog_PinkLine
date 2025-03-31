@@ -9,7 +9,7 @@ file: serverSourceBashrc
 
 今天更新后端服务, 打算进服务器重启一下后端服务, 结果发现所有的应用都消失了, 只剩下一个远古时期的`node.js`.
 
-![1](/image/serverSourceBashrc/1.webp)
+![1](https://image.s22y.moe/image/serverSourceBashrc/1.webp)
 
 服务器甚至没有重启过, 所有的东西就消失了.
 
@@ -19,7 +19,7 @@ file: serverSourceBashrc
 
 我本来都打算重新部署一遍服务了, 然后在备份数据的时候发现用户目录下是有软件的.
 
-![2](/image/serverSourceBashrc/2.webp)
+![2](https://image.s22y.moe/image/serverSourceBashrc/2.webp)
 
 这个时候我就想起了, 貌似之前在部署服务的时候要执行`source ~/.bashrc`才能用命令来着的, 试了一下, 果然是要加载配置的问题.
 

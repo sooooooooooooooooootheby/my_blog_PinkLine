@@ -9,7 +9,7 @@ file: socket_user_count
 
 前段时间刷视频看到了 Mix Space 项目, 好奇逛了一下, 发现页脚的实时在线人数还挺有意思, 刚好最近在重新设计博客的前后端, 就试了一下, 也成功在自己的博客实现了实时在线人数显示.
 
-![1.webp](/image/socket_user_count/1.webp)
+![1.webp](https://image.s22y.moe/image/socket_user_count/1.webp)
 
 ## 技术原理
 

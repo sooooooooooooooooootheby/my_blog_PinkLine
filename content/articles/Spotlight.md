@@ -13,7 +13,7 @@ file: Spotlight
 
 本文不介绍菜单（这个东西没什么好说了, 九六个a标签围一圈加个触发动画）, 主要说说这个跟随鼠标移动的聚光灯是怎么做到的
 
-![1](/image/Spotlight/1.webp)
+![1](https://image.s22y.moe/image/Spotlight/1.webp)
 
 当我们移动鼠标的时候, 会发现 class为 `large`的div的style一直在变化, 主要为 `left`,`top`,`background-position`三个属性.
 
@@ -89,4 +89,4 @@ document.onmousemove = function (event) {
 至此, 一个右键的聚光灯效果就做完了, 如果有需要可以把负责播放音效的两行代码注释掉, 放入你的音效链接, 就开始开启社死效果了（
 本文代码效果
 
-![2](/image/Spotlight/2.gif)
+![2](https://image.s22y.moe/image/Spotlight/2.gif)

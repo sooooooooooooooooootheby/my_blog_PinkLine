@@ -34,4 +34,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 3. 然后就在页面中使用组件并查看效果了
 
-![效果](/image/nuxt_ant_auto_import/1.webp)
+![效果](https://image.s22y.moe/image/nuxt_ant_auto_import/1.webp)

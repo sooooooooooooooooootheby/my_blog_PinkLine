@@ -53,7 +53,7 @@ hexo c; hexo g; hexo s
 
 在一串刷屏后你能看见控制台输出了一个链接: `http://localhost:4000/`，在浏览器打开这个链接就能看见Hexo默认的主题了。
 
-![hexo\_default\_theme](/image/hexo_custom_theme/hexo_default_theme.webp)
+![hexo\_default\_theme](https://image.s22y.moe/image/hexo_custom_theme/hexo_default_theme.webp)
 
 这个时候博客的文件目录如下。
 
@@ -101,7 +101,7 @@ categories:
 这是一些正文内容.
 ```
 
-![first\_article](/image/hexo_custom_theme/first_article.webp)
+![first\_article](https://image.s22y.moe/image/hexo_custom_theme/first_article.webp)
 
 ## 创建基本的页面
 
@@ -305,7 +305,7 @@ c
 </html>
 ```
 
-![fundamental\_index](/image/hexo_custom_theme/fundamental_index.webp)![fundamental\_about](/image/hexo_custom_theme/fundamental_about.webp)
+![fundamental\_index](https://image.s22y.moe/image/hexo_custom_theme/fundamental_index.webp)![fundamental\_about](https://image.s22y.moe/image/hexo_custom_theme/fundamental_about.webp)
 
 > 让我猜猜你现在肯定对于上面的内容很懵，这是正常的，因为让我自己看我也会懵。
 >
@@ -324,7 +324,7 @@ c
 
 我们可以直接通过`config`去访问站点的配置文件，通过`theme`访问主题的配置文件。
 
-![variable](/image/hexo_custom_theme/variable.webp)
+![variable](https://image.s22y.moe/image/hexo_custom_theme/variable.webp)
 
 ### 辅助函数
 
@@ -378,7 +378,7 @@ pagination_dir: page
 <% } %>
 ```
 
-![article\_list](/image/hexo_custom_theme/article_list.webp)
+![article\_list](https://image.s22y.moe/image/hexo_custom_theme/article_list.webp)
 
 ### 文章详细页
 
@@ -402,7 +402,7 @@ pagination_dir: page
 </div>
 ```
 
-![article](/image/hexo_custom_theme/article.webp)
+![article](https://image.s22y.moe/image/hexo_custom_theme/article.webp)
 
 ### 添加分类和标签列表
 

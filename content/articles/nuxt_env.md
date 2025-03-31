@@ -15,7 +15,7 @@ const config = useRuntimeConfig();
 console.log(process.env.SERVER);
 ```
 
-![1](/image/nuxt_env/1.webp)
+![1](https://image.s22y.moe/image/nuxt_env/1.webp)
 
 所以 nuxt3 提供了 [`runtimeConfig`](https://nuxt.com/docs/api/nuxt-config#runtimeconfig-1) 将环境变量, 以及一些你需要设置的全局变量传递到 Nuxt 应用的上下文.
 
@@ -50,7 +50,7 @@ console.log(config.server1);
 
 红圈是客户端打印内容, 可以看到 `config.server1` 是 `undefined`, 这意味着客户端无法获取这个变量.
 
-![2](/image/nuxt_env/2.webp)
+![2](https://image.s22y.moe/image/nuxt_env/2.webp)
 
 ## runtimeConfig 和 process 的区别
 
