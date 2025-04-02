@@ -12,7 +12,11 @@ onMounted(() => {
         reaction: false,
         search: false,
         dark: "html[class='dark-mode']",
-        emoji: ["https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emoji@b1.0.1/r1999"],
+        emoji: [
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/r1999",
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/aurakingdom",
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/mita"
+        ],
     });
 });
 </script>
