@@ -75,15 +75,18 @@
         padding: 0;
         line-height: 1.8;
 
-        &:has(.emoji) {
-            display: flex;
-            align-items: center;
-        }
+        // &:has(.emoji) {
+        //     display: flex;
+        //     align-items: center;
+        // }
     }
     .emoji {
-        width: 32px;
-        height: 32px;
+        // width: 32px;
+        // height: 32px;
+        width: auto;
+        height: 2em;
         margin: 0 4px;
+        display: inline
     }
     a {
         color: #d9908e;
