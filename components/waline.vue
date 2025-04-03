@@ -13,9 +13,9 @@ onMounted(() => {
         search: false,
         dark: "html[class='dark-mode']",
         emoji: [
-            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/r1999",
-            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/aurakingdom",
-            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/emojiHub@v1.0.0/mita"
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/Emoji_Chest@v1.0.0/package/r1999",
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/Emoji_Chest@v1.0.0/package/aurakingdom",
+            "https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/Emoji_Chest@v1.0.0/package/mita"
         ],
     });
 });
