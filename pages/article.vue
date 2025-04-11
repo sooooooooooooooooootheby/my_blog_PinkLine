@@ -118,7 +118,7 @@ const filteredSections = computed(() => {
                     color: var(--theme-color);
                 }
                 .content {
-                     display: -webkit-box;
+                    display: -webkit-box;
                     -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
@@ -137,6 +137,10 @@ const filteredSections = computed(() => {
             .jump {
                 color: var(--font-color);
                 text-decoration: none;
+                width: 60%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
 
                 .title {
                     transition: 0.2s;
@@ -144,6 +148,9 @@ const filteredSections = computed(() => {
                 .title:hover {
                     opacity: 0.6;
                 }
+            }
+            .data {
+                flex-shrink: 1;
             }
         }
     }
