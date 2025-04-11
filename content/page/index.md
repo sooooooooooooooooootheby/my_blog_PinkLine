@@ -10,11 +10,6 @@
 
 <img src="https://ghchart.rshah.org/d9908e/sooooooooooooooooootheby" alt="2016rshah's Github chart" />
 
-## 正在研究的项目 <img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999/MatildaSmug.png">
-
--   [PinkLine](https://github.com/sooooooooooooooooootheby/PinkLine)
-    基于 nuxt3 + nuxt/content3 的个人博客模板
-
 ## 我的站点 <img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999/LucySmug.png" />
 
 > 带有星号的`*`是我自己独立开发的! 当然, 这里的独立开发并不是指从0开始都是自己琢磨的, 会用到别人的技术.
