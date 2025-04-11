@@ -12,9 +12,9 @@
 
 如果你希望交换链接, 请修改[配置文件](https://github.com/sooooooooooooooooootheby/my_blog_nuxt/blob/main/app.config.ts)的友链部分, 提交一个 PR, 并请说明你的目的.
 
-如果你觉得pr麻烦, 也可以直接在评论区留言.
+如果你觉得 PR 麻烦, 也可以直接在评论区留言.
 
-我推荐使用 PR, 当然你也可以使用邮箱, 只是 PR 比较省事.
+我推荐使用 PR, 当然你也可以使用邮箱或者评论区, 只是 PR 比较省事.
 
 ## 关于格式
 
@@ -33,9 +33,9 @@
 
 {
     name: "sooooooooooooooooootheby", # or s22y
-    url: "http://blog.sooooooooooooooooootheby.top/",
+    url: "http://blog.s22y.moe/",
     description: "Go to the pier and get some fries",
-    button: "https://blog.sooooooooooooooooootheby.top/friend/Sooooooooooooooooootheby.webp",
-    avatar: "https://blog.sooooooooooooooooootheby.top/logo_small.webp"
+    button: "https://blog.s22y.moe/friend/Sooooooooooooooooootheby.webp",
+    avatar: "https://blog.s22y.moe/logo_small.webp"
 }
 ```
