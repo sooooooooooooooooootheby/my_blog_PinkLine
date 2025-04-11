@@ -30,5 +30,10 @@ export default defineAppConfig({
             url: "https://www.zla.pub/",
             button: "/friend/zla.webp",
         },
+        {
+            name: "lynn 的小站",
+            url: "https://blog.lynn6.top",
+            button: "/friend/lynn.webp"
+        }
     ],
 });
