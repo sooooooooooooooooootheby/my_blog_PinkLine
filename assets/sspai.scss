@@ -75,12 +75,7 @@
         padding: 0;
         line-height: 1.8;
 
-        // &:has(.emoji) {
-        //     display: flex;
-        //     align-items: center;
-        // }
         &:has(a) {
-            display: flex;
             align-items: center;
         }
         a {
@@ -88,18 +83,15 @@
         }
     }
     .emoji {
-        // width: 32px;
-        // height: 32px;
         width: auto;
         height: 2em;
         margin: 0 4px;
-        display: inline
+        display: inline;
     }
     a {
         color: #d9908e;
         line-height: 21px;
         text-decoration: none;
-        display: flex;
 
         img {
             width: 21px;
@@ -107,6 +99,10 @@
             margin: 0;
             margin-left: 6px;
             border-radius: 0;
+        }
+        &:has(img) {
+            display: flex;
+            align-items: center;
         }
     }
     a:hover {
