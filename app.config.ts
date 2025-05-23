@@ -56,7 +56,7 @@ export default defineAppConfig({
 	],
 	comment: {
 		isComment: true,
-		serverUrl: "https://comment.s22y.moe/",
+		serverUrl: "https://comment.blog.s22y.moe/",
 		emoji: ["https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/pinkline_commit@v1.0.0/r1999"],
 	},
 	rss: {
