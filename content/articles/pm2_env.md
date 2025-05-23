@@ -1,10 +1,8 @@
 ---
-title: "[随记]pm2无法自动读取环境变量"
-description: ""
-data: 2025-01-01T15:42:14.000Z
-dataed: null
-categories: 运维
-file: pm2_env
+title: pm2无法自动读取环境变量
+date: Wed, 01 Jan 2025 15:42:14 +0800
+sort: back-end
+description: 因为pm2不会自动读取`.env`文件, 需要显式指定环境变量.
 ---
 
 今天把写的ai应用部署的时候出现了很奇怪的问题。
@@ -27,6 +25,6 @@ file: pm2_env
 
 在启动项目的时候显式指定一下需要读取的环境变量就解决了。
 
-``` bash
+```bash
 pm2 start ./server.js --env .env
 ```

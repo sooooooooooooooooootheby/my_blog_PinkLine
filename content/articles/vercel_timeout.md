@@ -1,10 +1,8 @@
 ---
 title: 修改vercel超时问题
+date: Wed, 15 Jan 2025 12:22:54 +0800
+sort: back-end
 description: 将vercel默认的超时时间修改为最大值.
-data: 2025-01-15T12:22:54.000Z
-dataed: null
-categories: 后端
-file: vercel_timeout
 ---
 
 这段时间写了个 ai 聊天应用, 用 nuxt3 写的.

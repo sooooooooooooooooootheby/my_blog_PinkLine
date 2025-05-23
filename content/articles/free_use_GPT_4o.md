@@ -1,10 +1,8 @@
 ---
-title: 白嫖GPT 4o
-description: null
-data: 2025-01-07T15:42:14.000Z
-dataed: null
-categories: ai
-file: free_use_GPT_4o
+title: 白嫖GPT 4o key
+date: Tue, 07 Jan 2025 15:42:14 +0800
+sort: ai
+description: 白嫖的是Github的GPT
 ---
 
 ![cover](https://image.s22y.moe/image/free_use_GPT_4o/cover.webp)
@@ -31,7 +29,7 @@ file: free_use_GPT_4o
 
 ```json
 {
-    "type": "module",
+	"type": "module"
 }
 ```
 
@@ -46,30 +44,30 @@ pnpm i openai
 ```javascript
 import OpenAI from "openai";
 
-const token = "";   // 这里是你的key
+const token = ""; // 这里是你的key
 const endpoint = "https://models.inference.ai.azure.com";
 const modelName = "gpt-4o";
 
 export async function main() {
-    const client = new OpenAI({ baseURL: endpoint, apiKey: token });
+	const client = new OpenAI({ baseURL: endpoint, apiKey: token });
 
-    const stream = await client.chat.completions.create({
-        messages: [
-            { role: "system", content: "你是一个乐于助人的ai助手" },
-            { role: "user", content: "给我五个需要学习的理由" },
-        ],
-        model: modelName,
-        stream: true,
-    });
+	const stream = await client.chat.completions.create({
+		messages: [
+			{ role: "system", content: "你是一个乐于助人的ai助手" },
+			{ role: "user", content: "给我五个需要学习的理由" },
+		],
+		model: modelName,
+		stream: true,
+	});
 
-    for await (const part of stream) {
-        process.stdout.write(part.choices[0]?.delta?.content || "");
-    }
-    process.stdout.write("\n");
+	for await (const part of stream) {
+		process.stdout.write(part.choices[0]?.delta?.content || "");
+	}
+	process.stdout.write("\n");
 }
 
 main().catch((err) => {
-    console.error("The sample encountered an error:", err);
+	console.error("The sample encountered an error:", err);
 });
 ```
 

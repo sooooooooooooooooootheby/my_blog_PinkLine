@@ -1,10 +1,8 @@
 ---
 title: nuxt3 配置环境变量
-description: 通过 useRuntimeConfig() 获取而不是传统的 process.env
-data: 2025-02-06T09:23:09.191Z
-dataed: null
-categories: 前端
-file: nuxt_env
+date: Thu, 06 Feb 2025 09:23:09 +0800
+sort: front-end
+description: 通过 `useRuntimeConfig()` 获取环境变量而不是传统的 process.env
 ---
 
 一般在编写 node.js 程序时, 我们会使用 process.env 获取包含了当前 Shell 的所有环境变量, 而在 nuxt3 中, 虽然同样也可以通过 process.env 获取环境变量, 但只有服务端能获取到.

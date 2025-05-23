@@ -1,10 +1,8 @@
 ---
 title: Windows 终端美化
+date: Fri, 22 Nov 2024 20:25:10 +0800
+sort: tool
 description: 最近发现 Windows 11 更新了 LTSC 版本，也是迫不及待地换上了。换系统不可避免要重新配置环境，装各种各样的软件，就顺便安利一下终端美化。
-data: 2024-11-22T20:25:10.000Z
-dataed: null
-categories: Windows
-file: WindowsTerminal_oh-my-posh
 ---
 
 最近发现 Windows 11 更新了 LTSC 版本，也是迫不及待地换上了。

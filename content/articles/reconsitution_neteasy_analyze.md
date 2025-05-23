@@ -1,10 +1,7 @@
 ---
-title: 我重构了网易云解析工具
-description: null
-data: 2025-03-28T11:44:54.000Z
-dataed: null
-categories: 工具
-file: reconsitution_neteasy_analyze
+title: 重构了网易云解析工具
+date: Fri, 28 Mar 2025 11:44:54 +0800
+sort: tool
 ---
 
 在去年十月, 我因为想要把网易云的歌曲全部下载到手机上用本地播放器听歌, 就一直在找解析工具, 但是发现很多解析工具都只有单曲解, 这就比较麻烦了, 歌单里面几十上百首歌总不能我一首一首去下吧, 就寻思自己写一个批量下载.

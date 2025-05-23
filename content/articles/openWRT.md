@@ -1,10 +1,8 @@
 ---
 title: 小米路由器刷入openWRT
+date: Sat, 20 Jul 2024 10:26:40 +0800
+sort: router
 description: OpenWrt是适用于嵌入式设备的一个Linux发行版, 不过说实话我也不知道刷了能用来做什么, 就图好玩刷了一个.
-data: '2024-07-20T10:26:40.000Z'
-dataed: null
-categories: 路由器
-file: openWRT
 ---
 
 ## 写在前面

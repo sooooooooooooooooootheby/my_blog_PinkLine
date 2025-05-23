@@ -1,10 +1,8 @@
 ---
 title: mysql用户认证问题
-description: null
-data: 2024-09-24T12:22:53.000Z
-dataed: null
-categories: 后端
-file: userAuthenticationError
+date: Tue, 24 Sep 2024 12:22:53 +0800
+sort: back-end
+description: 修复nodejs使用mysql时总会出现的认证错误问题.
 ---
 
 # 出错原因
@@ -29,4 +27,3 @@ FLUSH PRIVILEGES;
 <!-- 查看用户认证方式 -->
 SELECT host, user, plugin FROM mysql.user;
 ```
-

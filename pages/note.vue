@@ -1,36 +1,26 @@
 <template>
-    <div>
-        <ul class="note">
-            <li class="item mark" v-for="item in note" :key="item.id">
-                <ContentRenderer :value="item" />
-                <p>{{ handleTime(item.data) }}</p>
-            </li>
-        </ul>
-    </div>
+	<div>
+		<h1 class="mb-10 text-3xl font-bold dark:text-white">日常记录</h1>
+		<ul>
+			<li v-for="item in note" class="mb-8 hasemoji prose max-w-full!">
+				<ContentRenderer :value="item" class="dark:text-white" />
+				<p class="mt-1 text-xs text-gray-600 dark:text-gray-400">{{ handleTime(item.date) }}</p>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script lang="ts" setup>
+const appConfig = useAppConfig();
+
 useSeoMeta({
-    title: "S22y 的随记",
-    ogTitle: "S22y 的随记",
+	title: appConfig.info.author + " 的随记",
+	ogTitle: appConfig.info.author + " 的随记",
 });
 
-const { data: note } = await(async () => {
-    return await useAsyncData("note", () => {
-        return queryCollection("notes").select("data", "body").order("data", "DESC").all();
-    });
+const { data: note } = await (async () => {
+	return await useAsyncData("note", () => {
+		return queryCollection("notes").select("date", "body").order("date", "DESC").all();
+	});
 })();
 </script>
-
-<style lang="scss" scoped>
-.note {
-    .item {
-        margin-bottom: 42px;
-        list-style: none;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .item:last-child {
-        border-bottom: none;
-    }
-}
-</style>

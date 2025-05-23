@@ -1,10 +1,9 @@
 ---
 title: 从0开始入门Hexo
+date: Wed, 07 Feb 2024 20:25:10 +0800
+update: Sun, 03 Nov 2024 14:06:40 +0800
+sort: front-end
 description: 如果你是一个前端小白, 只会前端三件套, 但是想自制一个博客, 那么这篇教程可能很适合你.
-data: 2024-02-07T20:25:10.000Z
-dataed: 2024-11-03T14:06:40.000Z
-categories: 前端
-file: hexo_custom_theme
 ---
 
 > 本文最初写于24年2月7日，在24年11月3日最后一次更新修改后归档。
@@ -53,7 +52,7 @@ hexo c; hexo g; hexo s
 
 在一串刷屏后你能看见控制台输出了一个链接: `http://localhost:4000/`，在浏览器打开这个链接就能看见Hexo默认的主题了。
 
-![hexo\_default\_theme](https://image.s22y.moe/image/hexo_custom_theme/hexo_default_theme.webp)
+![hexo_default_theme](https://image.s22y.moe/image/hexo_custom_theme/hexo_default_theme.webp)
 
 这个时候博客的文件目录如下。
 
@@ -101,7 +100,7 @@ categories:
 这是一些正文内容.
 ```
 
-![first\_article](https://image.s22y.moe/image/hexo_custom_theme/first_article.webp)
+![first_article](https://image.s22y.moe/image/hexo_custom_theme/first_article.webp)
 
 ## 创建基本的页面
 
@@ -138,92 +137,92 @@ theme: themeDemo
 >
 > ```yaml
 > # Site
-> title: Hexo        # 网站的标题
-> subtitle: ''       # 网站的副标题
-> description: ''    # 网站的描述，会在搜索引擎中显示
-> keywords:          # 网站的关键词。用于优化搜索引擎，帮助搜索引擎了解网站内容
-> author: John Doe   # 网站的作者
-> language: en       # 网站的语言
-> timezone: ''       # 网站的时区，用于管理显示的日期时间
+> title: Hexo # 网站的标题
+> subtitle: "" # 网站的副标题
+> description: "" # 网站的描述，会在搜索引擎中显示
+> keywords: # 网站的关键词。用于优化搜索引擎，帮助搜索引擎了解网站内容
+> author: John Doe # 网站的作者
+> language: en # 网站的语言
+> timezone: "" # 网站的时区，用于管理显示的日期时间
 >
 > # URL
-> url: http://example.com                   # 网站的基本URL
-> permalink: :year/:month/:day/:title/      # 永久连接格式，默认格式表示文章链接根据发布时间和标题生成
-> permalink_defaults:                       # 永久链接的默认设置
-> pretty_urls:                              # 链接美化选项
->   trailing_index: true                    # 是否在链接尾部添加 index.html
->   trailing_html: true                     # 是否在链接末尾添加 index
+> url: http://example.com # 网站的基本URL
+> permalink: :year/:month/:day/:title/ # 永久连接格式，默认格式表示文章链接根据发布时间和标题生成
+> permalink_defaults: # 永久链接的默认设置
+> pretty_urls: # 链接美化选项
+>     trailing_index: true # 是否在链接尾部添加 index.html
+>     trailing_html: true # 是否在链接末尾添加 index
 >
 > # Directory                  # 设置网站目录的基本结构
-> source_dir: source           # 存放源文件（css,js,image...）的目录
-> public_dir: public           # 公共文件目录，存放生成的静态网页文件的目录
-> tag_dir: tags                # 标签目录，存放标签页面的目录
-> archive_dir: archives        # 存档目录，存放存档页面的目录
-> category_dir: categories     # 分类目录，存放分类页面的目录
-> code_dir: downloads/code     # 代码目录，存放代码文件的目录
-> i18n_dir: :lang              # 国际化目录，存放国际化资源的目录
-> skip_render:                 # 跳过渲染，指定哪些文件或目录不需要渲染
+> source_dir: source # 存放源文件（css,js,image...）的目录
+> public_dir: public # 公共文件目录，存放生成的静态网页文件的目录
+> tag_dir: tags # 标签目录，存放标签页面的目录
+> archive_dir: archives # 存档目录，存放存档页面的目录
+> category_dir: categories # 分类目录，存放分类页面的目录
+> code_dir: downloads/code # 代码目录，存放代码文件的目录
+> i18n_dir: :lang # 国际化目录，存放国际化资源的目录
+> skip_render: # 跳过渲染，指定哪些文件或目录不需要渲染
 >
 > # Writing
-> new_post_name: :title.md          # 新文章的文件名格式
-> default_layout: post              # 指定文章页的默认布局
-> titlecase: false                  # 标题大小写转换，false表示不转换
-> external_link:                    # 外部链接设置
->   enable: true                    # 是否启用在新标签页中打开外部链接
->   field: site                     # 外部链接设置的范围，site表示应用到整个站点
->   exclude: ''                     # 排除的外部链接
-> filename_case: 0                  # 文件名大小写设置，设置为0表示保持原样
-> render_drafts: false              # 渲染草稿文章，false表示不渲染草稿
-> post_asset_folder: false          # 文章资源文件夹，指定是否为每篇文章创建一个资源文件夹，false表示不创建
-> relative_link: false              # 相对链接，false表示不使用相对链接
-> future: true                      # 未来文章日期，指定是否允许发布未来日期的文章，true表示允许
-> syntax_highlighter: highlight.js  # 语法高亮的插件，这里指定了highlight.js
-> highlight:                        # highlight语法高亮的设置
->   line_number: true               # 是否显示行号，true表示显示
->   auto_detect: false              # 是否自动检测语言，false表示不自动检测
->   tab_replace: ''                 # 选项卡替换，留空表示没有替换
->   wrap: true                      # 是否换行，true表示换行
->   hljs: false                     # 是否启用highlight.js，false表示不使用
-> prismjs:                          # psismjs语法高亮的设置
->   preprocess: true                # 是否预处理，true表示预处理
->   line_number: true               # 是否显示行号，true表示显示
->   tab_replace: ''                 # 选项卡替换，留空表示没有替换
+> new_post_name: :title.md # 新文章的文件名格式
+> default_layout: post # 指定文章页的默认布局
+> titlecase: false # 标题大小写转换，false表示不转换
+> external_link: # 外部链接设置
+>     enable: true # 是否启用在新标签页中打开外部链接
+>     field: site # 外部链接设置的范围，site表示应用到整个站点
+>     exclude: "" # 排除的外部链接
+> filename_case: 0 # 文件名大小写设置，设置为0表示保持原样
+> render_drafts: false # 渲染草稿文章，false表示不渲染草稿
+> post_asset_folder: false # 文章资源文件夹，指定是否为每篇文章创建一个资源文件夹，false表示不创建
+> relative_link: false # 相对链接，false表示不使用相对链接
+> future: true # 未来文章日期，指定是否允许发布未来日期的文章，true表示允许
+> syntax_highlighter: highlight.js # 语法高亮的插件，这里指定了highlight.js
+> highlight: # highlight语法高亮的设置
+>     line_number: true # 是否显示行号，true表示显示
+>     auto_detect: false # 是否自动检测语言，false表示不自动检测
+>     tab_replace: "" # 选项卡替换，留空表示没有替换
+>     wrap: true # 是否换行，true表示换行
+>     hljs: false # 是否启用highlight.js，false表示不使用
+> prismjs: # psismjs语法高亮的设置
+>     preprocess: true # 是否预处理，true表示预处理
+>     line_number: true # 是否显示行号，true表示显示
+>     tab_replace: "" # 选项卡替换，留空表示没有替换
 >
 > # Home page setting
-> index_generator:    # 首页的相关设置
->   path: ''          # 博客首页的根目录
->   per_page: 10      # 每页显示的文章数量
->   order_by: -date   # 文章的排序方式，-date表示按日期降序排序，意思是最新的文章排在前面
+> index_generator: # 首页的相关设置
+>     path: "" # 博客首页的根目录
+>     per_page: 10 # 每页显示的文章数量
+>     order_by: -date # 文章的排序方式，-date表示按日期降序排序，意思是最新的文章排在前面
 >
 > # Category & Tag
-> default_category: uncategorized   # 默认分类，如果文章没有指定分类时自动归类到uncategorized
-> category_map:                     # 分类映射，例如想要把a分类映射到b，可以在这里设置
-> tag_map:                          # 标签分类，和上一项相同
+> default_category: uncategorized # 默认分类，如果文章没有指定分类时自动归类到uncategorized
+> category_map: # 分类映射，例如想要把a分类映射到b，可以在这里设置
+> tag_map: # 标签分类，和上一项相同
 >
 > # Metadata elements
-> meta_generator: true    #元数据生成器。指定是否在生成的HTML页面中包含一个元数据标签来指示网站生成工具的名称和版本信息。
+> meta_generator: true #元数据生成器。指定是否在生成的HTML页面中包含一个元数据标签来指示网站生成工具的名称和版本信息。
 >
 > # Date / Time format
-> date_format: YYYY-MM-DD   # 文章发布的日期显示格式
-> time_format: HH:mm:ss     # 文章发布的时间格式
-> updated_option: 'mtime'   # 更新选项，指定如何处理文章更新时间的选项，mtime表示文件的修改时间为更新时间
+> date_format: YYYY-MM-DD # 文章发布的日期显示格式
+> time_format: HH:mm:ss # 文章发布的时间格式
+> updated_option: "mtime" # 更新选项，指定如何处理文章更新时间的选项，mtime表示文件的修改时间为更新时间
 >
 > # Pagination
-> per_page: 10            # 指定博客中每页显示的文章数量
-> pagination_dir: page    # 指定存放分页文件的目录
+> per_page: 10 # 指定博客中每页显示的文章数量
+> pagination_dir: page # 指定存放分页文件的目录
 >
 > # Include / Exclude file(s)
 > ## 这些选项允许您指定要包含、排除或忽略的文件，通常应用于源文件夹。在这个例子中，这些选项被留空，表示没有进行额外的设置。
-> include:    # 包含
-> exclude:    # 排除
-> ignore:     # 忽略
+> include: # 包含
+> exclude: # 排除
+> ignore: # 忽略
 >
 > # Extensions
-> theme: themeDemo    # 指定文章的主题
+> theme: themeDemo # 指定文章的主题
 >
 > # Deployment
 > deploy:
->   type: ''    #部署站点的类型
+>     type: "" #部署站点的类型
 > ```
 
 ### 构建基础的部分
@@ -271,22 +270,17 @@ theme: themeDemo
 # themeDemo/layout/_partial/head.ejs
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <title>Hexo</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title>Hexo</title>
 </head>
-c
-# themeDemo/layout/_partial/header.ejs
+c # themeDemo/layout/_partial/header.ejs
 
-<header>
-    我是导航栏
-</header>
+<header>我是导航栏</header>
 
 # themeDemo/layout/_partial/footer.ejs
 
-<footer>
-    我是页脚
-</footer>
+<footer>我是页脚</footer>
 ```
 
 在`layout.ejs`文件中导入他们，你就能收获一个基础的多页面网站了。
@@ -305,7 +299,7 @@ c
 </html>
 ```
 
-![fundamental\_index](https://image.s22y.moe/image/hexo_custom_theme/fundamental_index.webp)![fundamental\_about](https://image.s22y.moe/image/hexo_custom_theme/fundamental_about.webp)
+![fundamental_index](https://image.s22y.moe/image/hexo_custom_theme/fundamental_index.webp)![fundamental_about](https://image.s22y.moe/image/hexo_custom_theme/fundamental_about.webp)
 
 > 让我猜猜你现在肯定对于上面的内容很懵，这是正常的，因为让我自己看我也会懵。
 >
@@ -378,7 +372,7 @@ pagination_dir: page
 <% } %>
 ```
 
-![article\_list](https://image.s22y.moe/image/hexo_custom_theme/article_list.webp)
+![article_list](https://image.s22y.moe/image/hexo_custom_theme/article_list.webp)
 
 ### 文章详细页
 

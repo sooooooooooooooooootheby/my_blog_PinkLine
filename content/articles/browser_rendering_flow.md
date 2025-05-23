@@ -1,10 +1,8 @@
 ---
 title: 浏览器渲染流程 & 优化
-description:
-data: 2025-04-12T22:48:52.000Z
-dataed: null
-categories: 原理
-file: browser_rendering_flow
+date: Sat, 12 Apr 2025 22:48:52 +0800
+sort: front-end
+description: 一个网页是如何出现在你的面前的, 并且当你作为开发者该如何优化这个出现的过程.
 ---
 
 # 加载与构建

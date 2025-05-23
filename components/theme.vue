@@ -1,55 +1,31 @@
 <template>
-    <div class="theme">
-        <div class="iconBox" @click="handleTheme('light')">
-            <Icon class="icon" name="akar-icons:sun" />
-        </div>
-        <div class="iconBox" @click="handleTheme('dark')">
-            <Icon class="icon" name="akar-icons:moon" />
-        </div>
-        <div class="iconBox" @click="handleTheme('system')">
-            <Icon class="icon" name="akar-icons:airplay-video" />
-        </div>
-    </div>
+	<div class="mt-2 flex">
+		<button
+			@click="toggle('light')"
+			class="cursor-pointer mr-2 flex size-6 items-center justify-center rounded-lg border border-gray-600 text-xs text-gray-600 dark:border-gray-400 dark:text-gray-400"
+		>
+			<Icon :name="colorMode.preference === 'light' ? 'mynaui:sun-solid' : 'mynaui:sun'" />
+		</button>
+		<button
+			@click="toggle('dark')"
+			class="cursor-pointer mr-2 flex size-6 items-center justify-center rounded-lg border border-gray-600 text-xs text-gray-600 dark:border-gray-400 dark:text-gray-400"
+		>
+			<Icon :name="colorMode.preference === 'dark' ? 'mynaui:moon-solid' : 'mynaui:moon'" />
+		</button>
+		<button
+			@click="toggle('system')"
+			class="cursor-pointer mr-2 flex size-6 items-center justify-center rounded-lg border border-gray-600 text-xs text-gray-600 dark:border-gray-400 dark:text-gray-400"
+		>
+			<Icon :name="colorMode.preference === 'system' ? 'mynaui:desktop-solid' : 'mynaui:desktop'" />
+		</button>
+	</div>
 </template>
 
 <script lang="ts" setup>
+import { useColorMode } from "#imports";
 const colorMode = useColorMode();
 
-const handleTheme = (mode: string): void => {
-    colorMode.preference = mode;
-    const element: HTMLElement = document.body;
-    element.classList.remove("dark", "light");
-    element.classList.add(mode);
+const toggle = (mode: string) => {
+	colorMode.preference = mode;
 };
-
-onMounted(() => {
-    const element: HTMLElement = document.body;
-    element.classList.add(colorMode.value === "dark" ? "dark" : "light");
-});
 </script>
-
-<style lang="scss" scoped>
-.theme {
-    display: flex;
-
-    .iconBox {
-        width: 24px;
-        height: 24px;
-        margin-left: 6px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid var(--border-color);
-        border-radius: 4px;
-        transition: .2s;
-        cursor: pointer;
-
-        .icon {
-            font-size: 0.8rem;
-        }
-    }
-    .iconBox:hover {
-        background-color: var(--backgrond-color1);
-    }
-}
-</style>

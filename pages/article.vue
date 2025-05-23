@@ -1,158 +1,58 @@
 <template>
-    <div class="blog">
-        <h1>这些是我的宝藏</h1>
-        <p class="count">总共有 {{ count }} 篇文章</p>
-        <div class="bar">
-            <input placeholder="Search this page..." type="text" name="text" class="input" v-model="searchQuery" />
-        </div>
-        <div class="search" v-if="searchQuery">
-            <ul class="res">
-                <li class="item" v-for="item in filteredSections" :key="item.id">
-                    <NuxtLink :to="item.id" class="title">
-                        <h3>{{ item.title }}</h3>
-                    </NuxtLink>
-                    <p class="content">{{ item.content }}</p>
-                </li>
-            </ul>
-        </div>
-        <ul class="list" v-else>
-            <li class="item" v-for="item in list" :key="item.id">
-                <NuxtLink :to="item.path" class="jump">
-                    <span class="title">{{ item.title }}</span>
-                </NuxtLink>
-                <span class="data">{{ handleTime(item.data) }}</span>
-            </li>
-        </ul>
-    </div>
+	<div>
+		<!-- <h1 class="text-3xl font-bold dark:text-white">All post</h1> -->
+		<div class="mt-2 mb-10">
+			<p class="text-3xl font-bold text-gray-800 dark:text-gray-300">已经写了 {{ list?.length }} 篇文章了, 太棒了.</p>
+		</div>
+		<ul>
+			<li v-for="item in list" class="mb-8">
+				<NuxtLink :to="item.path">
+					<h2 class="text-xl font-bold dark:text-white">{{ item.title }}</h2>
+					<p class="my-2 text-sm text-gray-700 dark:text-gray-300">{{ item.description }}</p>
+				</NuxtLink>
+				<div class="flex text-sm text-gray-600 dark:text-gray-400">
+					<div class="flex items-center">
+						<span>{{ handleTime(item.date) }}</span>
+						<Icon name="mynaui:edit" v-if="item.update" />
+					</div>
+					<div class="mx-1">·</div>
+					<NuxtLink :to="`/sort?sort=${item.sort}`">
+						<span>#{{ item.sort }}</span>
+					</NuxtLink>
+				</div>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script lang="ts" setup>
+const appConfig = useAppConfig();
+
 useSeoMeta({
-    title: "S22y 的文章",
-    ogTitle: "S22y 的文章",
+	title: appConfig.info.author + " 的文章",
+	ogTitle: appConfig.info.author + " 的文章",
 });
 
-const { data: list } = await useAsyncData("list", () => {
-    return queryCollection("articles").select("title", "description", "data", "path").order("data", "DESC").all();
+// 这是文章列表的部分
+const { data: list } = await useAsyncData("list", async () => {
+	const Original = await queryCollection("articles").select("title", "description", "date", "update", "path", "sort").all();
+	const processed = Original.map((item) => ({
+		...item,
+		date: item.update || item.date,
+	})).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+	return processed;
 });
 
-const { data: count } = await useAsyncData("count", () => {
-    return queryCollection("articles").count();
-});
-
+// 这是查询的部分
 const searchQuery = ref("");
 
 const { data: sections } = await useAsyncData("search-sections", () => {
-    return queryCollectionSearchSections("articles");
+	return queryCollectionSearchSections("articles");
 });
 
 interface Section {
-    id: number;
-    title: string;
-    content: string;
+	id: string;
+	title: string;
+	content: string;
 }
-
-const filteredSections = computed(() => {
-    const query = searchQuery.value.toLowerCase();
-    return sections.value.filter((section: Section) => {
-        return section.title.toLowerCase().includes(query) || section.content.toLowerCase().includes(query);
-    });
-});
 </script>
-
-<style lang="scss" scoped>
-.blog {
-    .count {
-        margin-top: 12px;
-    }
-    .bar {
-        width: 100%;
-        margin: 32px 0;
-        display: flex;
-        align-items: center;
-
-        .input {
-            width: 100%;
-            height: 45px;
-            margin: 0 auto;
-            padding: 0 12px;
-            border-radius: 12px;
-            border: 1.5px solid lightgrey;
-            outline: none;
-            transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-            box-shadow: 0px 0px 20px -18px;
-            background-color: transparent;
-            color: var(--font-color);
-        }
-
-        .input:hover {
-            border: 2px solid lightgrey;
-            box-shadow: 0px 0px 20px -17px;
-        }
-
-        .input:active {
-            transform: scale(0.95);
-        }
-
-        .input:focus {
-            border: 2px solid grey;
-        }
-    }
-    .search {
-        width: 100%;
-
-        .res {
-            margin-top: 32px;
-
-            .item {
-                margin-bottom: 24px;
-                list-style: none;
-
-                .title {
-                    color: var(--font-color);
-                    margin-bottom: 2px;
-                    text-decoration: none;
-                    transition: 0.2s;
-                }
-                .title:hover {
-                    color: var(--theme-color);
-                }
-                .content {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    opacity: 0.8;
-                }
-            }
-        }
-    }
-    .list {
-        .item {
-            margin-bottom: 24px;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-
-            .jump {
-                color: var(--font-color);
-                text-decoration: none;
-                width: 60%;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-
-                .title {
-                    transition: 0.2s;
-                }
-                .title:hover {
-                    opacity: 0.6;
-                }
-            }
-            .data {
-                flex-shrink: 1;
-            }
-        }
-    }
-}
-</style>

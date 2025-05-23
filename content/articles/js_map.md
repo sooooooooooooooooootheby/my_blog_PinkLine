@@ -1,10 +1,9 @@
 ---
 title: JavaScript 中的 Map 对象
-description: null
-data: 2025-03-31T01:22:14.000Z
-dataed: null
-categories: jss
-file: js_map
+date: Wed, 07 Feb 2024 20:25:10 +0800
+update: Sun, 03 Nov 2024 14:06:40 +0800
+sort: front-end
+description: 使用 Map 对象操作键值
 ---
 
 今天刷 LeetCode 时看到的一个题目:
@@ -15,21 +14,22 @@ file: js_map
 
 ```typescript
 function twoSum(nums: number[], target: number): number[] {
-    let sub1 = 0, sub2 = 0;
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = 0; j < nums.length; j++) {
-            if (i === j) {
-                continue;
-            }
-            if (nums[i] + nums[j] === target) {
-                sub1 = i;
-                sub2 = j;
-            }
-        }
-    }
+	let sub1 = 0,
+		sub2 = 0;
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = 0; j < nums.length; j++) {
+			if (i === j) {
+				continue;
+			}
+			if (nums[i] + nums[j] === target) {
+				sub1 = i;
+				sub2 = j;
+			}
+		}
+	}
 
-    return [sub1, sub2];
-};
+	return [sub1, sub2];
+}
 ```
 
 看了一下排行榜前几位的答案, 发现用到了`Map`这个对象, 不过很遗憾, 之前并没有接触过.
@@ -63,17 +63,17 @@ console.log(contacts.size); // 1
 
 ```typescript
 function twoSum(nums: number[], target: number): number[] {
-    const map = new Map();
-    const length = nums.length;
+	const map = new Map();
+	const length = nums.length;
 
-    for (let i = 0; i < length; i++) {
-        // 如果 has 查询到 target - item === map 中保存的键
-        if (map.has(target - nums[i])) {
-            // 返回当前item的下标i, 以及通过get方法获取has方法查询到的键值, 返回下标.
-            return [i, map.get(target - nums[i])];
-        }
+	for (let i = 0; i < length; i++) {
+		// 如果 has 查询到 target - item === map 中保存的键
+		if (map.has(target - nums[i])) {
+			// 返回当前item的下标i, 以及通过get方法获取has方法查询到的键值, 返回下标.
+			return [i, map.get(target - nums[i])];
+		}
 
-        map.set(nums[i], i);
-    }
-};
+		map.set(nums[i], i);
+	}
+}
 ```

@@ -1,10 +1,8 @@
 ---
 title: nvm 安装使用
+date: Thu, 21 Nov 2024 15:42:14 +0800
+sort: back-end
 description: 记录一下在服务端安装 node.js 省的偶尔要装一下又不记得怎么装
-data: '2024-11-21T15:42:14.000Z'
-dataed: null
-categories: 后端
-file: nvm_install
 ---
 
 ## 在线安装

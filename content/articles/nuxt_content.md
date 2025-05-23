@@ -1,10 +1,9 @@
 ---
-title: nuxtjs/content简单入门
+title: nuxtjs/content v3 简单入门
+date: Fri, 18 Oct 2024 20:25:10 +0800
+update: Tue, 12 Nov 2024 14:06:40 +0800
+sort: front-end
 description: nuxtjs/content是nuxt官方的一个基于文件的CMS,通过content可以很方便地管理文章内容
-data: '2024-10-18T20:25:10.000Z'
-dataed: 2024-11-12T14:06:40.000Z
-categories: 前端
-file: nuxt_content
 ---
 
 @nuxtjs/content 是 nuxt3 官方的一个 CMS(内容管理)插件, 可以方便的将 markdown 文件作为内容进行管理, 并且支持搜索, 分页, 分类等高级功能.
@@ -53,7 +52,7 @@ content
 
 |                              |                    |
 | ---------------------------- | ------------------ |
-| 文件                           | 路径                 |
+| 文件                         | 路径               |
 | content/index.md             | /                  |
 | content/demo1.md             | /demo2             |
 | content/articles/article1.md | /articles/article1 |
@@ -100,16 +99,16 @@ content
 
 ```vue
 <template>
-    <div class="article" v-for="item in articles" :key="item._path">
-        {{ item }}
-    </div>
+	<div class="article" v-for="item in articles" :key="item._path">
+		{{ item }}
+	</div>
 </template>
 
 <script setup>
-    const articles = await queryContent("articles")
-        .where({ _path: { $contains: "/articles/" } }) // 获取 /content/articles 目录下所有的文章
-        .sort({ data: -1 }) // data 是 Front-matter 中的信息, 我这里 data 表示创建文章的日期 -1 表示降序排序
-        .find();
+const articles = await queryContent("articles")
+	.where({ _path: { $contains: "/articles/" } }) // 获取 /content/articles 目录下所有的文章
+	.sort({ data: -1 }) // data 是 Front-matter 中的信息, 我这里 data 表示创建文章的日期 -1 表示降序排序
+	.find();
 </script>
 ```
 
@@ -253,16 +252,16 @@ const results = ref([]);
 
 // 搜索函数
 const handleSearch = async () => {
-    results.value = await searchContent(search);
+	results.value = await searchContent(search);
 };
 </script>
 
 <template>
-    <main>
-        <input v-model="search" />
-        <button @click="handleSearch">search</button>
+	<main>
+		<input v-model="search" />
+		<button @click="handleSearch">search</button>
 
-        <pre>{{ results }} </pre>
-    </main>
+		<pre>{{ results }} </pre>
+	</main>
 </template>
 ```

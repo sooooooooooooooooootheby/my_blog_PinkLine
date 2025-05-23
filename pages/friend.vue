@@ -1,60 +1,37 @@
 <template>
-    <div class="friend">
-        <div class="mark">
-            <h1>来自互联网的朋友</h1>
-            <ul class="list">
-                <li class="item" v-for="item in appConfig.friend" :key="item.name">
-                    <a :href="item.url" target="_block">
-                        <img :src="item.button" alt="button" />
-                    </a>
-                </li>
-            </ul>
-            <ContentRenderer :value="friend" />
-        </div>
-        <clientOnly>
-            <waline />
-        </clientOnly>
-    </div>
+	<div>
+		<div class="mb-6">
+			<h1 class="mb-10 text-3xl font-bold dark:text-white">来自互联网的朋友</h1>
+			<ul v-if="appConfig.friend.length" class="w-full mb-8 flex flex-wrap">
+				<li v-for="item in appConfig.friend" class="m-2">
+					<a :href="item.url" target="_block">
+						<div class="w-[88px] h-[31px] overflow-hidden flex items-center">
+							<img :src="item.button" :alt="item.name" />
+						</div>
+					</a>
+				</li>
+			</ul>
+			<p v-else>博主还没有友链哦, 欢迎交换友链.</p>
+			<div class="prose prose-sm sm:prose-base dark:prose-invert max-w-full">
+				<ContentRenderer v-if="friend" :value="friend" />
+			</div>
+		</div>
+		<clientOnly v-if="appConfig.comment.isComment">
+			<waline />
+		</clientOnly>
+	</div>
 </template>
 
 <script lang="ts" setup>
-useSeoMeta({
-    title: "S22y 的朋友",
-    ogTitle: "S22y 的朋友",
-});
-
-const route = useRoute();
 const appConfig = useAppConfig();
+const route = useRoute();
+
+useSeoMeta({
+	title: appConfig.info.author + " 的朋友",
+	ogTitle: appConfig.info.author + " 的朋友",
+});
 
 const { data: friend } = await useAsyncData(route.path, () => {
-    return queryCollection("content").path("/page/friend").first();
+	return queryCollection("content").path("/page/friend").first();
 });
 </script>
-
-<style lang="scss" scoped>
-.friend {
-    .list {
-        margin-bottom: 12px;
-        display: flex;
-        flex-wrap: wrap;
-
-        .item {
-            width: 88px;
-            height: 31px;
-            margin-right: 12px;
-            list-style: none;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                margin: 0;
-                cursor: pointer;
-            }
-        }
-    }
-}
-</style>

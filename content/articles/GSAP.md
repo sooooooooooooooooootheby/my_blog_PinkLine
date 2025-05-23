@@ -1,10 +1,9 @@
 ---
 title: GSAP 动画库
+date: Thu, 28 Dec 2023 15:42:14 +0800
+update: Fri, 15 Nov 2024 18:11:32 +0800
+sort: front-end
 description: GSAP allows you to effortlessly animate anything JS can touch. Delivering silky-smooth performance and unmatched support so you can focus on the fun stuff.
-data: 2023-12-28T15:42:14.000Z
-dataed: 2024-11-15T18:11:32.000Z
-categories: 前端
-file: GSAP
 ---
 
 GSAP 是一个 JavaScript 库, 用于创建高性能、跨浏览器的动画. 它允许你轻松地动画化任何 JavaScript 可以操作的元素.
@@ -26,19 +25,19 @@ yarn add gsap
 
 在 vue 中引入 GSAP.
 
-``` vue
+```vue
 <template>
-    <div class="div" ref="div" style="width: 100px; height: 100px; background-color: red"></div>
+	<div class="div" ref="div" style="width: 100px; height: 100px; background-color: red"></div>
 </template>
 
 <script>
 import { gsap } from "gsap";
 
 export default {
-    mounted() {
-        gsap.to(this.$refs.div, { x: 100, duration: 1, repeat: -1, yoyo: true });
-    }
-}
+	mounted() {
+		gsap.to(this.$refs.div, { x: 100, duration: 1, repeat: -1, yoyo: true });
+	},
+};
 </script>
 ```
 
@@ -58,13 +57,13 @@ gsao.to(".box", { x: 200 });
 
 有四种方法，或者说`tweens`，`tweens`是 GSAP 官方的说法，我也不知道这个代表什么，可能他们喜欢创造一些新东西。
 
--   gsap.to(): 这是最常见的方法，他会从元素当前的状态开始运行动画。
+- gsap.to(): 这是最常见的方法，他会从元素当前的状态开始运行动画。
 
--   gsap.form(): 这个就像是`.to()`翻过来一样，他会从方法中定义的值开始运行动画，如果你设置了 x: 200，他会就从元素原本位置的右边 200px 的位置开始执行动画，移动到元素原本的位置。
+- gsap.form(): 这个就像是`.to()`翻过来一样，他会从方法中定义的值开始运行动画，如果你设置了 x: 200，他会就从元素原本位置的右边 200px 的位置开始执行动画，移动到元素原本的位置。
 
--   gsap.formTo(): 这由你来定义起始的位置和结束的位置。
+- gsap.formTo(): 这由你来定义起始的位置和结束的位置。
 
--   gsap.set(): 这是一个没有动画的方法，把过度时间给去掉了。
+- gsap.set(): 这是一个没有动画的方法，把过度时间给去掉了。
 
 ### 目标(target)或者多个目标
 
@@ -266,14 +265,14 @@ tl.to(".green", { x: 200 }).to(".purple", { x: 200, scale: 0.2 }).to(".orange", 
 
 GSAP 提供了八个函数用于控制动画的效果, 通过这些函数可以更好地控制你的动画(反正我是没用过了 hhh).
 
--   tween.play(): 开始播放
--   tween.pause(): 暂停
--   tween.reverse(): 倒转
--   tween.seek(0.5): 跳转到 0.5 秒的位置
--   tween.progress(0.25): 跳转到动画的 1/4 处
--   tween.timeScale(2): 加 2 倍速
--   tween.kill(): 杀死动画
--   tween.timeScale(2).reverse(): 以二倍速倒放
+- tween.play(): 开始播放
+- tween.pause(): 暂停
+- tween.reverse(): 倒转
+- tween.seek(0.5): 跳转到 0.5 秒的位置
+- tween.progress(0.25): 跳转到动画的 1/4 处
+- tween.timeScale(2): 加 2 倍速
+- tween.kill(): 杀死动画
+- tween.timeScale(2).reverse(): 以二倍速倒放
 
 ```html
 <button onclick="tween.play()">开始</button>

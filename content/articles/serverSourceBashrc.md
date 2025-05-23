@@ -1,10 +1,7 @@
 ---
 title: 解决每次连接服务器都要加载配置文件
-description: null
-data: 2024-10-05T23:00:14.000Z
-dataed: null
-categories: 后端
-file: serverSourceBashrc
+date: Sat, 05 Oct 2024 23:00:14 +0800
+sort: back-end
 ---
 
 今天更新后端服务, 打算进服务器重启一下后端服务, 结果发现所有的应用都消失了, 只剩下一个远古时期的`node.js`.

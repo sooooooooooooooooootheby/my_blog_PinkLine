@@ -1,10 +1,7 @@
 ---
 title: 字体压缩
-description: 一般中文字体都挺大的, 大概十几二十mb. 使用 fonttools 压缩字体, 能压缩 90% 上下, 节省流量, 也能加快页面加载.
-data: 2024-03-11T12:22:54.000Z
-dataed: null
-categories: 工具
-file: fontcompress
+date: Mon, 11 Mar 2024 12:22:54 +0800
+sort: tool
 ---
 
 有时候我们想要给自己的页面添加自定义字体，但是常见的中文字体文件格式都是otf或者ttf，这类字体格式往往占用很大，十几二十MB都是家常便饭，这样就不方便页面的加载，有可能用户准备退出了字体也没加载出来，这时候只需要给字体取子集转换成WOFF2格式即可压缩字体。
@@ -47,9 +44,9 @@ fonttools subset "./SourceHanSans-Bold.otf" --text-sile="./3500.txt" --output-fi
 
 命令解释：
 
-* $input_file 输入的字体文件路径
-* $text_sile 需要保留取子集的文字txt文件
-* $output_file 输出的字体文件路径
+- $input_file 输入的字体文件路径
+- $text_sile 需要保留取子集的文字txt文件
+- $output_file 输出的字体文件路径
 
 因为我这里字体、txt文件和终端位置都在桌面，所以直接输入文件名，如果文件位置不同需要添加路径。
 
@@ -67,8 +64,8 @@ fonttools ttLib.woff2 compress "SourceHanSans-Bold-compress.otf" -o "SourceHanSa
 
 命令解释：
 
-* $input_file 输入的字体文件路径
-* $output_file 输出的字体文件路径
+- $input_file 输入的字体文件路径
+- $output_file 输出的字体文件路径
 
 这里可能会出现报错，原因是缺少了 `brotli`库。
 

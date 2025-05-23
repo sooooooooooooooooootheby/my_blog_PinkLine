@@ -1,10 +1,7 @@
 ---
 title: 在 js 中如何遍历一个数组
-description:
-data: 2025-04-04T00:42:52.000Z
-dataed: null
-categories: 编程
-file: array_loop
+date: Fri, 04 Apr 2025 00:42:52 +0800
+sort: Programming
 ---
 
 虽然这个标题看起来会有些弱智<img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/Emoji_Chest@v1.0.0/package/aurakingdom/SerenaBlush.png" alt="SerenaBlush.png" class="emoji">, 遍历一个数组是任何一门编程语言的必学项目, 但是这两天我在做一个快速复制emoji的工具时发现在js中遍历一个数组居然有四种方法!
@@ -25,13 +22,13 @@ for (let i = 10; i < 20; i += 2)
 
 ```javascript
 for (let i = 0; i < 10; i++) {
-    if (i === 3) {
-        continue;
-    }
-    if (i === 6) {
-        break;
-    }
-    console.log(i);
+	if (i === 3) {
+		continue;
+	}
+	if (i === 6) {
+		break;
+	}
+	console.log(i);
 }
 ```
 
@@ -51,8 +48,8 @@ for (let i = 0; i < 10; i++) {
 
 ```javascript
 for (const v of [1, 2, 3, 4, 5]) {
-    console.log(v);
-    console.log(typeof v);
+	console.log(v);
+	console.log(typeof v);
 }
 ```
 
@@ -72,7 +69,7 @@ for (const v of [1, 2, 3, 4, 5]) {
 
 ```javascript
 for (const i in [1, 2, 3, 4, 5]) {
-    console.log(typeof i);
+	console.log(typeof i);
 }
 ```
 
@@ -83,9 +80,8 @@ for (const i in [1, 2, 3, 4, 5]) {
 ```javascript
 const a = [1, 2, 3, 4, 5, 6, 7];
 
-
 for (const i in a) {
-    console.log(a[i]);
+	console.log(a[i]);
 }
 ```
 
@@ -97,7 +93,7 @@ for (const i in a) {
 const b = { a: 1, b: 2, c: 3 };
 
 for (let i in b) {
-    console.log(i);
+	console.log(i);
 }
 ```
 
@@ -109,7 +105,7 @@ for (let i in b) {
 // item 为当前遍历到的值
 // index 为索引
 // array 为当前遍历的数组
-array.map((item, index, array) => {})
+array.map((item, index, array) => {});
 ```
 
 `.map()`不会修改原有的数组, 会返回一个新的数组, 如果你需要映射数据可以使用这个方法.
@@ -120,8 +116,8 @@ array.map((item, index, array) => {})
 const a = [1, 2, 3, 4, 5, 6];
 
 const b = a.map((item) => {
-    return item += 1;
-})
+	return (item += 1);
+});
 
 console.log(a); // [ 1, 2, 3, 4, 5, 6 ]
 console.log(b); // [ 2, 3, 4, 5, 6, 7 ]
@@ -133,9 +129,9 @@ console.log(b); // [ 2, 3, 4, 5, 6, 7 ]
 const a = [1, 2, 3, 4, 5, 6];
 
 a.forEach((item, index, array) => {
-    console.log(item);
-    console.log(index);
-    console.log(array);
+	console.log(item);
+	console.log(index);
+	console.log(array);
 });
 ```
 
@@ -150,8 +146,3 @@ a.forEach((item, index, array) => {
 - 仅执行操作, 无需新数组 → `.forEach()`
 
 说了那么多, 其实日常开发使用`.map()` & `forEach()`即可<img src="https://gcore.jsdelivr.net/gh/sooooooooooooooooootheby/Emoji_Chest@v1.0.0/package/r1999/RegulusNanikore.png" alt="RegulusNanikore.png" class="emoji">
-
-
-
-
-

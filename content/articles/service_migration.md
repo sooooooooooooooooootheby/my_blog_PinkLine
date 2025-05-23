@@ -1,10 +1,7 @@
 ---
-title: "[随记]将旧服务器上的服务迁移到新服务器"
-description: null
-data: 2025-02-22T20:55:34.000Z
-dataed: null
-categories: 运维
-file: service_migration
+title: 将旧服务器上的服务迁移到新服务器
+date: Sat, 22 Feb 2025 20:55:34 +0800
+sort: back-end
 ---
 
 最近斥巨资换了个 .moe 的域名, 因为域名在 dynadot 买的, 所以我之前的华为云服务器使用这个域名会被拦截, 索性又斥巨资换了个 cloudcone 的 VPS

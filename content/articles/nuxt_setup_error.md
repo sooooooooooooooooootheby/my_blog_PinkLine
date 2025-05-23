@@ -1,10 +1,9 @@
 ---
 title: 解决 nuxt.js 安装失败
+date: Thu, 26 Dec 2024 18:11:32 +0800
+updaate: Fri, 27 Dec 2024 15:42:14 +0800
+sort: front-end
 description: 解决因为网络问题导致无法正常安装 nuxt.js项目的问题
-data: 2024-12-27T15:42:14.000Z
-dataed: 2024-12-26T18:11:32.000Z
-categories: 前端
-file: nuxt_setup_error
 ---
 
 想玩玩 nuxt.js, 但是安装的时候发现报错了.
