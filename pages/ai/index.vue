@@ -20,6 +20,13 @@
 </template>
 
 <script lang="ts" setup>
+const appConfig = useAppConfig();
+
+useSeoMeta({
+	title: `我该怎么做?! | ${appConfig.info.title}`,
+	ogTitle: `我该怎么做?! | ${appConfig.info.title}`,
+});
+
 // 这是文章列表的部分
 const { data: list } = await useAsyncData("ailist", async () => {
 	return await queryCollection("ai").select("title", "ai", "path").all();

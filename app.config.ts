@@ -1,6 +1,6 @@
 export default defineAppConfig({
 	info: {
-		title: "PinkLine",
+		title: "s22y's blog",
 		author: "s22y",
 		lang: "zh-cn",
 		logo: "/logo.webp",

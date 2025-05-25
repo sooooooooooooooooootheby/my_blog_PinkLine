@@ -14,8 +14,8 @@
 const appConfig = useAppConfig();
 
 useSeoMeta({
-	title: appConfig.info.author + " 的随记",
-	ogTitle: appConfig.info.author + " 的随记",
+	title: `随记 | ${appConfig.info.title}`,
+	ogTitle: `随记 | ${appConfig.info.title}`,
 });
 
 const { data: note } = await (async () => {

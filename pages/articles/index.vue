@@ -29,8 +29,8 @@
 const appConfig = useAppConfig();
 
 useSeoMeta({
-	title: appConfig.info.author + " 的文章",
-	ogTitle: appConfig.info.author + " 的文章",
+	title: `文章 | ${appConfig.info.title}`,
+	ogTitle: `文章 | ${appConfig.info.title}`,
 });
 
 // 这是文章列表的部分

@@ -27,8 +27,8 @@ const appConfig = useAppConfig();
 const route = useRoute();
 
 useSeoMeta({
-	title: appConfig.info.author + " 的朋友",
-	ogTitle: appConfig.info.author + " 的朋友",
+	title: `朋友们 | ${appConfig.info.title}`,
+	ogTitle: `朋友们 | ${appConfig.info.title}`,
 });
 
 const { data: friend } = await useAsyncData(route.path, () => {
