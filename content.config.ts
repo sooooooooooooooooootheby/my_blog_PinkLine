@@ -24,5 +24,13 @@ export default defineContentConfig({
 				date: z.date(),
 			}),
 		}),
+		ai: defineCollection({
+			type: "page",
+			source: "ai/*.md",
+			schema: z.object({
+				title: z.string(),
+				ai: z.string(),
+			}),
+		}),
 	},
 });

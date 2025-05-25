@@ -13,6 +13,7 @@ export default defineAppConfig({
 		{ path: "/", name: "about", icon: "akar-icons:coffee" },
 		{ path: "/article", name: "article", icon: "akar-icons:folder" },
 		{ path: "/note", name: "note", icon: "akar-icons:comment" },
+		{ path: "/ai", name: "ai", icon: "akar-icons:star" },
 		// { path: "/tag", name: "tag", icon: "akar-icons:tag" },
 		// { path: "/sort", name: "sort", icon: "akar-icons:sort" },
 		{ path: "/friend", name: "friend", icon: "akar-icons:paper-airplane" },
