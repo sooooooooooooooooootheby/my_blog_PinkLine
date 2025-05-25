@@ -11,7 +11,7 @@ export default defineAppConfig({
 	},
 	page: [
 		{ path: "/", name: "about", icon: "akar-icons:coffee" },
-		{ path: "/article", name: "article", icon: "akar-icons:folder" },
+		{ path: "/articles", name: "articles", icon: "akar-icons:folder" },
 		{ path: "/note", name: "note", icon: "akar-icons:comment" },
 		{ path: "/ai", name: "ai", icon: "akar-icons:star" },
 		// { path: "/tag", name: "tag", icon: "akar-icons:tag" },

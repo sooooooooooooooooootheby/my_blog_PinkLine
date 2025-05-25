@@ -2,7 +2,7 @@
 	<div>
 		<template v-if="article">
 			<div class="text-gray-600 dark:text-gray-400">
-				<NuxtLink to="/article">
+				<NuxtLink to="/articles">
 					<Icon name="akar-icons:arrow-back" class="mr-1 text-xs" />
 					<span class="text-sm">回到文章列表</span>
 				</NuxtLink>
@@ -36,7 +36,7 @@
 		<template v-else>
 			<div class="dark:text-white">
 				<h1 class="mb-2 text-center text-xl font-bold">哦😯, 看起来我们没有找到你需要的文章.</h1>
-				<NuxtLink to="/article">
+				<NuxtLink to="/articles">
 					<p class="text-center underline">回到文章列表</p>
 				</NuxtLink>
 			</div>
