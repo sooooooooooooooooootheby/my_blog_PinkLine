@@ -1,6 +1,8 @@
 ::hero{:icon='["mdi:github", "mdi:discord"]' :a='["https://github.com/sooooooooooooooooootheby", "https://discord.gg/UYEgBQNj"]'}
 #name
-sooooooooooooooooootheby\[s22y\]
+s22y
+#subname
+sooooooooooooooooootheby
 #info
 一个前端 `developer`, 擅长使用`vue.js` & `Nuxt.js`.
 #location
