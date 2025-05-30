@@ -4,7 +4,7 @@ s22y
 #subname
 sooooooooooooooooootheby
 #info
-一个前端 `developer`, 擅长使用`vue.js` & `Nuxt.js`.
+一个前端 `developer`, 擅长使用`Vue.js` & `Nuxt.js`, 以及我最近在学习`Next.js`
 #location
 广西, 南宁
 ::
