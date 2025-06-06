@@ -10,3 +10,29 @@
 .prose {
     max-width: 100% !important;
 }
+
+@font-face {
+	font-family: HanaMeatbald;
+	src: url(./font/HanaMeatball-Medium.ttf);
+}
+
+@font-face {
+	font-family: ComicShannsMonoNerdFont;
+	src: url(./font/ComicShannsMonoNerdFont-Regular.otf);
+}
+
+* {
+	font-family: HanaMeatbald;
+}
+
+code {
+	font-family: ComicShannsMonoNerdFont;
+
+    span {
+        font-family: ComicShannsMonoNerdFont;
+    }
+}
+
+pre {
+    font-size: 0.9em;
+}
