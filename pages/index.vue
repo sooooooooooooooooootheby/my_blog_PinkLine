@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<template v-if="about">
-			<article class="prose prose-sm sm:prose-base dark:prose-invert mx-auto">
+			<article class="prose prose-sm sm:prose-base dark:prose-invert">
 				<ContentRenderer :value="about" />
 			</article>
 		</template>
