@@ -15,9 +15,13 @@
 		</div>
 	</div>
 	<div class="my-4 flex items-center justify-center">
-		<span class="inline-flex items-center rounded-full border-1 border-gray-600 px-3 py-1 text-xs dark:border-gray-200">
+		<span class="inline-flex items-center rounded-full border-1 border-gray-600 px-3 py-1 text-xs dark:border-gray-200 mr-2">
 			<Icon name="mynaui:location-solid" class="mr-1" />
 			<slot name="location" mdc-unwrap="p" />
+		</span>
+		<span class="inline-flex items-center rounded-full border-1 border-gray-600 px-3 py-1 text-xs dark:border-gray-200">
+			<Icon name="mynaui:accessibility-solid" class="mr-1" />
+			<slot name="mbti" mdc-unwrap="p" />
 		</span>
 		<ul class="m-0! flex p-0!">
 			<li v-for="item in contacts" class="list-none">
