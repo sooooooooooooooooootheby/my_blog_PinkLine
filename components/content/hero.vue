@@ -1,7 +1,7 @@
 <template>
 	<div class="relative h-64 w-full bg-red-50 max-md:h-42">
 		<img src="/Canvas-Ruom.webp" alt="cover" class="rounded-t-lg m-0! h-full w-full object-cover" />
-		<img src="/logo.webp" alt="logo" class="absolute -bottom-[64px] left-1/2 m-0! size-32 -translate-x-1/2 rounded-full border-6 border-white dark:border-black" />
+		<img src="/avatar.webp" alt="logo" class="absolute -bottom-[64px] left-1/2 m-0! size-32 -translate-x-1/2 rounded-full border-6 border-white dark:border-black" />
 	</div>
 	<div class="item-center mt-20 flex flex-col [&>*]:text-center">
 		<div class="text-3xl [&>*]:m-0">
