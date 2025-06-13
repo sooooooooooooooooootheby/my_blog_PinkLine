@@ -5,7 +5,7 @@
 				<p class="m-0!">{{ item.name }}</p>
 				<p class="m-0! text-xs text-gray-500">{{ item.info }}</p>
 			</div>
-			<a :href="item.url" class="flex items-center">
+			<a :href="item.url" class="flex items-center" target="_blank">
                 <Icon class="text-lg duration-300 hover:rotate-45" name="mynaui:arrow-up-right" />
             </a>
 		</li>
