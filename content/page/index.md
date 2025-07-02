@@ -6,7 +6,7 @@ sooooooooooooooooootheby
 #info
 一个前端 `developer`, 擅长使用`Vue.js` & `Nuxt.js`, 以及我最近在学习`Next.js`
 #location
-广西, 南宁
+广西, 桂林
 #mbti
 INTJ
 ::
